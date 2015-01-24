@@ -1,0 +1,19 @@
+<nav class="js-menu sliding-menu-content">
+  <ul>
+    {% for post in site.posts reversed %}
+    {% if post.title %}
+    <li><a class="scroll-on-page-link" href="#{{post.title}}">
+      {% if post.categories contains "week" %}Week {%endif%}{{ post.title }}
+    </a></li>
+    {% endif %}
+    {% endfor %}
+
+    {% for page in site.pages %}
+    {% if page.title %}
+    <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+<div class="js-menu-screen sliding-menu-fade-screen"></div>
