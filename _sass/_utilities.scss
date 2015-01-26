@@ -56,4 +56,51 @@
   }
 }
 
-// Based on code by http://codepen.io/xmark/
+.expander {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $expander-arrow-width: 0.7em;
+  $expander-toggle-size: 1em;
+  $expander-toggle-arrow-size: $expander-toggle-size;
+  $expander-toggle-margin: 1em;
+
+  width: 100%;
+
+  .expander-trigger {
+    @include user-select(none);
+    border-bottom: 1px solid $light-gray;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    margin-bottom: $expander-toggle-size;
+    padding-bottom: $expander-toggle-size / 4;
+
+    &:after {
+      font-size: $expander-arrow-width;
+      content: "\25BC";
+      margin-right: 0.5em;
+      float: right;
+    }
+  }
+
+  .expander-hidden {
+    &:after {
+      font-size: $expander-arrow-width;
+      content: "\25BA";
+      float: right;
+    }
+  }
+
+  .expander-hidden + .expander-content {
+    display: none;
+  }
+}

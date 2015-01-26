@@ -2,13 +2,17 @@
 title: Embodying Code
 email: akaye@saic.edu
 description: >
-  This course examines the possibilities of artistic form provided by modern computer-aided design
-  and manufacturing technologies. Students will learn software-based tools such as Rhino3D,
-  a computer aided design (CAD) package, as well as Grasshopper, a graphical algorithm editor
-  tightly integrated with Rhino's modeling tools. Together, these tools afford a powerful modeling
-  environment allowing students to explore generative algorithms, parametric design and the geometric
-  interpretation of data and real-time interactions in the context of creating physical objects.
-  Students will use laser cutters, 3D printers and CNC mills to give these geometric explorations physical form.
+  Course site for Embodying Code - Art & Technology Studies
+  / SAIC / Spring 2015. Built on <a href=http://atom.io>Atom</a>
+   with <a href=http://jekyllrb.com target=_blank>Jekyll</a>,
+  <a href=http://bourbon.io target=_blank>Bourbon</a>,
+  <a href=http://neat.bourbon.io target=_blank>Neat</a>, &
+  <a href=http://refills.bourbon.io target=_blank>Refills</a> using
+  <a href=http://sass-lang.com target=_blank>Sass</a> &
+  <a href=http://coffeescript.org target=_blank>Coffeescript</a>.
+  Code managed with <a href=http://github.com target=_blank>Github</a>
+   and deployed with <a href=http://wercker.com target=_blank>Wercker</a>
+   to a <a href=http://digitalocean.com target=_blank>Digital Ocean</a> droplet.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://embodyingcode.com" # the base hostname & protocol for your site
 twitter_username: notandrewkaye

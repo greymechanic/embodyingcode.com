@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "intro"
+date:   2015-01-26 07:00:00
+categories: intro
+---
+> Computation is often misunderstood because of the complexities of software and the process of creating it are invisible.
+
+**overview**
+
+This course examines the possibilities of artistic form provided by modern computer-aided design and manufacturing technologies. Students will learn software-based tools such as Rhino3D, a computer aided design (CAD) package, as well as Grasshopper, a graphical algorithm editor tightly integrated with Rhino's modeling tools. Together, these tools afford a powerful modeling environment allowing students to explore generative algorithms, parametric design and the geometric interpretation of data and real-time interactions in the context of creating physical objects. Students will use laser cutters, 3D printers and CNC mills to give these geometric explorations physical form.
+
+**how it'll work**
+
+We'll be covering an array of topics all revolving around the topic of code. How can we embody code to produce a robust and meaningful output. Moving beyond the screen, how can we think about code in the digital fabrication and output process? How does understanding code change the way we use tool like laser cutters and 3D printers? We'll mix readings with technical demos to move toward a mentality of truly embodying code.
+
+**[syllabus]({{ "/assets/pdfs/EmbodyingCodeSpring2015.pdf" | prepend: site.baseurl }}) / [resources]({{ "/resources" | prepend: site.baseurl }})**
