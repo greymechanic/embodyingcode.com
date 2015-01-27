@@ -11,13 +11,8 @@ $(document).ready ->
   if $("a.scroll-on-page-link").on "click touchstart"
     $(".js-menu,.js-menu-screen").toggleClass "is-visible" if $(".js-menu,.js-menu-screen").hasClass "is-visible"
   # expand section
-  expanderTrigger = document.getElementById("js-expander-trigger")
-  expanderContent = document.getElementById("js-expander-content")
-  expanderTrigger2 = document.getElementById("js-expander-trigger-2")
-  expanderContent2 = document.getElementById("js-expander-content-2")
-  $("#js-expander-trigger").click ->
-    $(this).toggleClass "expander-hidden"
-  $("#js-expander-trigger-2").click ->
+  demoExpand = $('.demo')
+  $(demoExpand).click ->
     $(this).toggleClass "expander-hidden"
 
 # smooth scroll anchors
