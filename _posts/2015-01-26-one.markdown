@@ -24,7 +24,7 @@ categories: >
 
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Processing Basics</a>
+<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
 <div id="js-expander-content" class="expander-content" markdown="1">
 
 #####Comments & Basic Statements
@@ -122,7 +122,7 @@ turned the shapes fill off. You also turned antialiasing on which smooths out yo
 
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden">Shapes, Colors, & Variables</a>
+<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, & Variables</a>
 <div id="js-expander-content-2" class="expander-content" markdown="1">
 
 Different shapes can be made in many different ways. Here are some of the most common shapes:
@@ -203,5 +203,82 @@ while ( i < 100 ) {
 }
 {% endhighlight %}
 
+</div>
+</div>
+
+
+
+<div class="expander">
+<a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
+<div id="js-expander-content-3" class="expander-content" markdown="1">
+
+{% highlight java %}
+
+/*
+Processing Demo 1
+Author: Andrew Kaye
+Date: 01/26/2015
+Detail: Getting started with Processing
+*/
+
+size(800,500);
+background(0, 255, 255); // R, G, B, A
+
+fill(255,255,0);
+ellipse(100, 100, 40, 40);  // Draw a circle
+
+//drawing lines in the window
+line(10,10,100,100);
+line(60,10,40,70);
+line(100,10,20,40);
+
+// change stroke weight & draw a new line
+strokeWeight(4);
+line(10,100,100,10);
+
+// add a stroke color and change the weight again
+stroke(0,255,12);
+strokeWeight(8);
+
+fill(255,0,0, 120);
+rect(490, 100, 200, 100); // Draw a square
+{% endhighlight%}
+</div>
+</div>
+
+<div class="expander">
+<a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
+<div id="js-expander-content-4" class="expander-content" markdown="1">
+
+{% highlight java %}
+/*
+Processing Demo 2
+Author: Andrew Kaye
+Date: 01/26/2015
+Detail: Working with variables and basic logic
+*/
+
+int thisThing = 150;
+int kittens = 20;
+
+int x = 500;
+int y = 500;
+
+void setup() {
+  size(500, 500);
+  background(thisThing, thisThing, thisThing); // R, G, B, A
+
+}
+
+void draw() {
+  if ( mousePressed ) {
+    fill(255, 255, 0);
+    noStroke();
+    ellipse(mouseX, mouseY, kittens, kittens);  // Draw a circles
+    stroke(255, 0, 0);
+    line( mouseX, mouseY, x, y);
+  }
+}
+{% endhighlight%}
 </div>
 </div>

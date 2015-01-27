@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    var expanderContent, expanderContent2, expanderTrigger, expanderTrigger2;
+    var demoExpand;
     $('a').attr('target', '_blank');
     $('a.scroll-on-page-link,a.page-link').attr('target', '');
     $(".js-menu-trigger,.js-menu-screen").on("click touchstart", function(e) {
@@ -12,14 +12,8 @@
         $(".js-menu,.js-menu-screen").toggleClass("is-visible");
       }
     }
-    expanderTrigger = document.getElementById("js-expander-trigger");
-    expanderContent = document.getElementById("js-expander-content");
-    expanderTrigger2 = document.getElementById("js-expander-trigger-2");
-    expanderContent2 = document.getElementById("js-expander-content-2");
-    $("#js-expander-trigger").click(function() {
-      return $(this).toggleClass("expander-hidden");
-    });
-    return $("#js-expander-trigger-2").click(function() {
+    demoExpand = $('.demo');
+    return $(demoExpand).click(function() {
       return $(this).toggleClass("expander-hidden");
     });
   });

@@ -13,13 +13,14 @@
  and deployed with <a href=http://wercker.com target=_blank>Wercker</a>
  to a <a href=http://digitalocean.com target=_blank>Digital Ocean</a> droplet.
 ">
-  
+
   <!-- css -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
   <!-- js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script src="/js/jquery-2.1.1.min.js""></script>
 
   <link rel="canonical" href="http://embodyingcode.com/">
   <link rel="alternate" type="application/rss+xml" title="Embodying Code" href="http://embodyingcode.com/feed.xml" />
@@ -122,7 +123,7 @@
 </ul>
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Processing Basics</a>
+<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
 <div id="js-expander-content" class="expander-content">
 
     <h5 id="comments--basic-statements">Comments &amp; Basic Statements</h5>
@@ -205,7 +206,7 @@ turned the shapes fill off. You also turned antialiasing on which smooths out yo
 </div>
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden">Shapes, Colors, &amp; Variables</a>
+<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, &amp; Variables</a>
 <div id="js-expander-content-2" class="expander-content">
 
     <p>Different shapes can be made in many different ways. Here are some of the most common shapes:</p>
@@ -271,6 +272,78 @@ If we write x = 1, we know that if we see an x we can say it has a value of 1.</
 <span class="k">while</span> <span class="o">(</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="o">)</span> <span class="o">{</span>
   <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
   <span class="n">i</span><span class="o">++;</span>
+<span class="o">}</span></code></pre></div>
+
+  </div>
+</div>
+
+<div class="expander">
+<a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
+<div id="js-expander-content-3" class="expander-content">
+
+    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
+<span class="cm">Processing Demo 1</span>
+<span class="cm">Author: Andrew Kaye</span>
+<span class="cm">Date: 01/26/2015</span>
+<span class="cm">Detail: Getting started with Processing</span>
+<span class="cm">*/</span>
+
+<span class="n">size</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span><span class="mi">500</span><span class="o">);</span>
+<span class="n">background</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
+
+<span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">ellipse</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">40</span><span class="o">);</span>  <span class="c1">// Draw a circle</span>
+
+<span class="c1">//drawing lines in the window</span>
+<span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">);</span>
+<span class="n">line</span><span class="o">(</span><span class="mi">60</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">40</span><span class="o">,</span><span class="mi">70</span><span class="o">);</span>
+<span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">40</span><span class="o">);</span>
+
+<span class="c1">// change stroke weight &amp; draw a new line</span>
+<span class="n">strokeWeight</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+<span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span>
+
+<span class="c1">// add a stroke color and change the weight again</span>
+<span class="n">stroke</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">12</span><span class="o">);</span>
+<span class="n">strokeWeight</span><span class="o">(</span><span class="mi">8</span><span class="o">);</span>
+
+<span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span> <span class="mi">120</span><span class="o">);</span>
+<span class="n">rect</span><span class="o">(</span><span class="mi">490</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
+
+  </div>
+</div>
+
+<div class="expander">
+<a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
+<div id="js-expander-content-4" class="expander-content">
+
+    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
+<span class="cm">Processing Demo 2</span>
+<span class="cm">Author: Andrew Kaye</span>
+<span class="cm">Date: 01/26/2015</span>
+<span class="cm">Detail: Working with variables and basic logic</span>
+<span class="cm">*/</span>
+
+<span class="kt">int</span> <span class="n">thisThing</span> <span class="o">=</span> <span class="mi">150</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">kittens</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+  <span class="n">size</span><span class="o">(</span><span class="mi">500</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+  <span class="n">background</span><span class="o">(</span><span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
+
+<span class="o">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span> <span class="n">mousePressed</span> <span class="o">)</span> <span class="o">{</span>
+    <span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+    <span class="n">noStroke</span><span class="o">();</span>
+    <span class="n">ellipse</span><span class="o">(</span><span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">kittens</span><span class="o">,</span> <span class="n">kittens</span><span class="o">);</span>  <span class="c1">// Draw a circles</span>
+    <span class="n">stroke</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+    <span class="n">line</span><span class="o">(</span> <span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+  <span class="o">}</span>
 <span class="o">}</span></code></pre></div>
 
   </div>
