@@ -1,36 +1,10 @@
 ---
 layout: post
-title:  "intro"
-date:   2015-002-02 07:00:00
-categories: intro
+title:  "Two"
+subtitle: "Authorize"
+date: 2015-02-02 07:00:00
+categories: >
+  week
+  class
 published: false
 ---
-
-> Software is deeply woven into contemporary life—economically, culturally,
-creatively, politically—in manners both obvious and nearly invisible. Yet
-while much is written about how software is used, and the activities that
-it supports and shapes, thinking about software itself has remained largely
-technical for much of its history. Increasingly, however, artists, scientists,
-engineers, hackers, designers, and scholars in the humanities and social
-sciences are finding that for the questions they face, and the things they
-need to build, an expanded understanding of software is necessary. For
-such understanding they can call upon a strand of texts in the history of
-computing and new media, they can take part in the rich implicit culture of
-software, and they can also take part in the development of an emerging,
-fundamentally transdisciplinary, computational literacy. These provide the
-foundation for software studies.
-
->Software studies uses and develops cultural, theoretical, and practiceoriented
-approaches to make critical, historical, and experimental accounts
-of (and interventions via) the objects and processes of software. The field
-engages and contributes to the research of computer scientists, the work
-of software designers and engineers, and the creations of software artists.
-It tracks how software is substantially integrated into the processes of contemporary
-culture and society, reformulating processes, ideas, institutions,
-and cultural objects around their closeness to algorithmic and formal description
-and action. Software studies proposes histories of computational
-cultures and works with the intellectual resources of computing to develop
-reflexive thinking about its entanglements and possibilities. It does this
-both in the scholarly modes of the humanities and social sciences and in
-the software creation and research modes of computer science, the arts,
-and design.

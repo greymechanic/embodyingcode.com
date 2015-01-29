@@ -13,272 +13,268 @@ categories: >
 
 - Intros
 - Course Overview
+  Background / examples
 - [Processing](http://processing.org) workshop
 
 *for next week:*
 
 - work on Processing sketches
 - get authorized on the laser cutter if you aren't already
-- get authorized in the io lab
+- Don't forget about uthorizations @ 1PM in Michigan 427 (the io lab)
 - read [A Touch of Code](/assets/PDFs/touch_of_code.pdf) & [Code as Medium](/assets/PDFs/villareal_code_as_medium.pdf)
 
-
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
-<div id="js-expander-content" class="expander-content" markdown="1">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
 
-#####Comments & Basic Statements
+  #####Comments & Basic Statements
 
-Enter the following program header at the top of your program. Replace the
-placeholders, text with the <context>, with your own details or information requested.
-In every program you write in this class you will start with a program header.
-Don't forget to add these and then fill out the purpose section at the end of the exercise.
+  Enter the following program header at the top of your program. Replace the
+  placeholders, text with the <context>, with your own details or information requested.
+  In every program you write in this class you will start with a program header.
+  Don't forget to add these and then fill out the purpose section at the end of the exercise.
 
-{% highlight java %}
-/*
-Sketch 1
-Author: <first name> <last name>
-Date: <today's date>
-Detail: <short paragraph explaining your sketch>
-*/
-{% endhighlight %}
+  {% highlight java %}
+  /*
+  Sketch 1
+  Author: <first name> <last name>
+  Date: <today's date>
+  Detail: <short paragraph explaining your sketch>
+  */
+  {% endhighlight %}
 
-The syntax `/*   */` denotes a block (multi-line) comment. A comment is a
-portion of the code that is ignored when being compiled. Comments are used for
-leaving notes or documentation within the code. The following syntax is an
-example of a single line comment.
+  The syntax `/*   */` denotes a block (multi-line) comment. A comment is a
+  portion of the code that is ignored when being compiled. Comments are used for
+  leaving notes or documentation within the code. The following syntax is an
+  example of a single line comment.
 
-{% highlight java %}
-// This is a single line comment
-{% endhighlight %}
+  {% highlight java %}
+  // This is a single line comment
+  {% endhighlight %}
 
-Now under your program header enter the following code, comment and all. You
-will learn more about these commands during the lecture and when reading the text.
+  Now under your program header enter the following code, comment and all. You
+  will learn more about these commands during the lecture and when reading the text.
 
-{% highlight java %}
-size(800, 800); // This sets the size of the window
-background(255);  // This sets the color of the background
-{% endhighlight %}
+  {% highlight java %}
+  size(800, 800); // This sets the size of the window
+  background(255);  // This sets the color of the background
+  {% endhighlight %}
 
-Now click on **Run** and check out the larger window.
+  Now click on **Run** and check out the larger window.
 
-Notice that the words *size* and *background* are blue in color within the PDE.
-This is called syntax highlighting. The editor knows that these are key words or
-valid instructions within the Processing language and colors them accordingly.
+  Notice that the words *size* and *background* are blue in color within the PDE.
+  This is called syntax highlighting. The editor knows that these are key words or
+  valid instructions within the Processing language and colors them accordingly.
 
-##### Primitive Shapes
-Under the background command enter the following to draw your first primitive shape.
+  ##### Primitive Shapes
+  Under the background command enter the following to draw your first primitive shape.
 
-{% highlight java %}
-ellipse(100, 100, 150, 150);  // Draw a circle
-{% endhighlight %}
+  {% highlight java %}
+  ellipse(100, 100, 150, 150);  // Draw a circle
+  {% endhighlight %}
 
-The ellipse command draws an ellipse. The command takes four (4) parameters.
-View the following reference to understand how to use the command. Pay attention to
-the order of the parameters and what they are responsible for.See the [Ellipse Docs](http://processing.org/reference/ellipse_.html)
-for more info.
+  The ellipse command draws an ellipse. The command takes four (4) parameters.
+  View the following reference to understand how to use the command. Pay attention to
+  the order of the parameters and what they are responsible for.See the [Ellipse Docs](http://processing.org/reference/ellipse_.html)
+  for more info.
 
-Now try the following commands.
+  Now try the following commands.
 
-{% highlight java %}
-line(0, 0, 800, 800); // Draw a line
-line(0, 400, 800, 400); // Draw a line
-rect(300, 300, 200, 200); // Draw a square
-{% endhighlight %}
+  {% highlight java %}
+  line(0, 0, 800, 800); // Draw a line
+  line(0, 400, 800, 400); // Draw a line
+  rect(300, 300, 200, 200); // Draw a square
+  {% endhighlight %}
 
-Pay attention to the order and how the shapes are drawn on the screen. Your
-program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5... till the end
-of the program. How the shapes are drawn on the screen reflect this. Each shape
-also has a point of origin and processing also has a particular way it lays out the screen.
+  Pay attention to the order and how the shapes are drawn on the screen. Your
+  program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5... till the end
+  of the program. How the shapes are drawn on the screen reflect this. Each shape
+  also has a point of origin and processing also has a particular way it lays out the screen.
 
-Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
-bottom-right is *width*, *height*.  The Y axis is vertical and X axis is the horizontal.
-Negative values are off screen and positive values move down and across respectively.
-The following is an excerpt from the text *Learning Processing*, by Daniel Shiffman.
-This quick read does a great job of explaining more about the coordinate system and
-how objects are drawn to the screen.
+  Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
+  bottom-right is *width*, *height*.  The Y axis is vertical and X axis is the horizontal.
+  Negative values are off screen and positive values move down and across respectively.
+  The following is an excerpt from the text *Learning Processing*, by Daniel Shiffman.
+  This quick read does a great job of explaining more about the coordinate system and
+  how objects are drawn to the screen.
 
-[Drawing Tutorial](http://processing.org/tutorials/drawing/)
+  [Drawing Tutorial](http://processing.org/tutorials/drawing/)
 
-Highlight the word line within the PDE. Now with the word highlighted go up to
-the *Help >> Find in Reference* menu item. This will bring up a local copy of the
-Processing language reference. This is to make sure that you always have the help
-you need. Take a moment to read about the line and rect commands.
+  Highlight the word line within the PDE. Now with the word highlighted go up to
+  the *Help >> Find in Reference* menu item. This will bring up a local copy of the
+  Processing language reference. This is to make sure that you always have the help
+  you need. Take a moment to read about the line and rect commands.
 
-Now backup and enter the following between the background and ellipse command.
+  Now backup and enter the following between the background and ellipse command.
 
-{% highlight java %}
-smooth();  // turn on anti-aliasing or make my shapes look good
-noFill();  // turn off the fill of the shapes
-{% endhighlight %}
+  {% highlight java %}
+  smooth();  // turn on anti-aliasing or make my shapes look good
+  noFill();  // turn off the fill of the shapes
+  {% endhighlight %}
 
-Notice that you can now see through the square within the program. You just
-turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.
-
-
-</div>
-</div>
+  Notice that you can now see through the square within the program. You just
+  turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.
 
 
-
-<div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, & Variables</a>
-<div id="js-expander-content-2" class="expander-content" markdown="1">
-
-Different shapes can be made in many different ways. Here are some of the most common shapes:
-
-{% highlight java %}
-line(x1, y1, x2, y2)
-triangle(x1, y1, x2, y2, x3, y3)
-quad(x1, y1, x2, y2, x3, y3, x4, y4)
-rect(x, y, width, height)
-ellipse(x, y, width, height)
-arc(x, y, width, height, start, stop)
-{% endhighlight %}
-
-#### Helpful Properties:
-
-{% highlight java %}
-smooth() // blends edges to create smooth lines
-noSmooth() // does the opposite
-strokeWeight(x) //By default stroke weight is 1px,strokeWeight allows you to increase the stroke of drawn lines
-noStroke() //this function does not take a variable, it simple doesn't draw a stroke
-{% endhighlight %}
-
-#### Transparency:
-
-The following functions control colors in your sketches
-
-{% highlight java %}
-background(r, g, b) // sets the background
-fill(r, g, b) // fills any shape that comes after it in sequence
-stroke(r, g, b) // sets the stroke color for anything following
-{% endhighlight %}
-
-By adding a fourth parameter to these we can change the alpha value of the color, or the transparency
-
-![RGBA](/assets/rgb.jpg)
-
-
--Adding a transparency allows us to blend shapes and colors together.
-
-{% highlight java %}
-background(r, g, b, a)
-fill(r, g, b, a)
-stroke(r, g, b, a)
-{% endhighlight %}
-
-#### Variables
-
-Similar to the variables we know from algebra, Processing uses variables to store a value.
-If we write x = 1, we know that if we see an x we can say it has a value of 1.
-
-##### Data Types
-
-{% highlight java %}
-// Integer - This is only whole number values
-int x = 5
-
-// Float - Can contain decimal places
-float y = 20.5  
-{% endhighlight %}
-
-#### Iteration w/ loops
-
-Iteration is a way of controlling repetition. There are two different structures for doing so.
-
-{% highlight java %}
-// for loop
-for ( int i = 0; i < 100; i++ ) {
-  line(100, 100 + i, 200, 200 + i);
-}
-
-// while loop
-
-int i = 0;
-
-while ( i < 100 ) {
-  line(100, 100 + i, 200, 200 + i);
-  i++;
-}
-{% endhighlight %}
-
-</div>
-</div>
-
-
-
-<div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
-<div id="js-expander-content-3" class="expander-content" markdown="1">
-
-{% highlight java %}
-
-/*
-Processing Demo 1
-Author: Andrew Kaye
-Date: 01/26/2015
-Detail: Getting started with Processing
-*/
-
-size(800,500);
-background(0, 255, 255); // R, G, B, A
-
-fill(255,255,0);
-ellipse(100, 100, 40, 40);  // Draw a circle
-
-//drawing lines in the window
-line(10,10,100,100);
-line(60,10,40,70);
-line(100,10,20,40);
-
-// change stroke weight & draw a new line
-strokeWeight(4);
-line(10,100,100,10);
-
-// add a stroke color and change the weight again
-stroke(0,255,12);
-strokeWeight(8);
-
-fill(255,0,0, 120);
-rect(490, 100, 200, 100); // Draw a square
-{% endhighlight%}
-</div>
+  </div>
 </div>
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
-<div id="js-expander-content-4" class="expander-content" markdown="1">
+  <a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, & Variables</a>
+  <div id="js-expander-content-2" class="expander-content" markdown="1">
 
-{% highlight java %}
-/*
-Processing Demo 2
-Author: Andrew Kaye
-Date: 01/26/2015
-Detail: Working with variables and basic logic
-*/
+  Different shapes can be made in many different ways. Here are some of the most common shapes:
 
-int thisThing = 150;
-int kittens = 20;
+  {% highlight java %}
+  line(x1, y1, x2, y2)
+  triangle(x1, y1, x2, y2, x3, y3)
+  quad(x1, y1, x2, y2, x3, y3, x4, y4)
+  rect(x, y, width, height)
+  ellipse(x, y, width, height)
+  arc(x, y, width, height, start, stop)
+  {% endhighlight %}
 
-int x = 500;
-int y = 500;
+  #### Helpful Properties:
 
-void setup() {
-  size(500, 500);
-  background(thisThing, thisThing, thisThing); // R, G, B, A
+  {% highlight java %}
+  smooth() // blends edges to create smooth lines
+  noSmooth() // does the opposite
+  strokeWeight(x) //By default stroke weight is 1px,strokeWeight allows you to increase the stroke of drawn lines
+  noStroke() //this function does not take a variable, it simple doesn't draw a stroke
+  {% endhighlight %}
 
-}
+  #### Transparency:
 
-void draw() {
-  if ( mousePressed ) {
-    fill(255, 255, 0);
-    noStroke();
-    ellipse(mouseX, mouseY, kittens, kittens);  // Draw a circles
-    stroke(255, 0, 0);
-    line( mouseX, mouseY, x, y);
+  The following functions control colors in your sketches
+
+  {% highlight java %}
+  background(r, g, b) // sets the background
+  fill(r, g, b) // fills any shape that comes after it in sequence
+  stroke(r, g, b) // sets the stroke color for anything following
+  {% endhighlight %}
+
+  By adding a fourth parameter to these we can change the alpha value of the color, or the transparency
+
+  ![RGBA](/assets/rgb.jpg)
+
+
+  -Adding a transparency allows us to blend shapes and colors together.
+
+  {% highlight java %}
+  background(r, g, b, a)
+  fill(r, g, b, a)
+  stroke(r, g, b, a)
+  {% endhighlight %}
+
+  #### Variables
+
+  Similar to the variables we know from algebra, Processing uses variables to store a value.
+  If we write x = 1, we know that if we see an x we can say it has a value of 1.
+
+  ##### Data Types
+
+  {% highlight java %}
+  // Integer - This is only whole number values
+  int x = 5
+
+  // Float - Can contain decimal places
+  float y = 20.5  
+  {% endhighlight %}
+
+  #### Iteration w/ loops
+
+  Iteration is a way of controlling repetition. There are two different structures for doing so.
+
+  {% highlight java %}
+  // for loop
+  for ( int i = 0; i < 100; i++ ) {
+    line(100, 100 + i, 200, 200 + i);
   }
-}
-{% endhighlight%}
+
+  // while loop
+
+  int i = 0;
+
+  while ( i < 100 ) {
+    line(100, 100 + i, 200, 200 + i);
+    i++;
+  }
+  {% endhighlight %}
+
+  </div>
 </div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
+  <div id="js-expander-content-3" class="expander-content" markdown="1">
+
+  {% highlight java %}
+
+  /*
+  Processing Demo 1
+  Author: Andrew Kaye
+  Date: 01/26/2015
+  Detail: Getting started with Processing
+  */
+
+  size(800,500);
+  background(0, 255, 255); // R, G, B, A
+
+  fill(255,255,0);
+  ellipse(100, 100, 40, 40);  // Draw a circle
+
+  //drawing lines in the window
+  line(10,10,100,100);
+  line(60,10,40,70);
+  line(100,10,20,40);
+
+  // change stroke weight & draw a new line
+  strokeWeight(4);
+  line(10,100,100,10);
+
+  // add a stroke color and change the weight again
+  stroke(0,255,12);
+  strokeWeight(8);
+
+  fill(255,0,0, 120);
+  rect(490, 100, 200, 100); // Draw a square
+  {% endhighlight%}
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
+  <div id="js-expander-content-4" class="expander-content" markdown="1">
+
+  {% highlight java %}
+  /*
+  Processing Demo 2
+  Author: Andrew Kaye
+  Date: 01/26/2015
+  Detail: Working with variables and basic logic
+  */
+
+  int thisThing = 150;
+  int kittens = 20;
+
+  int x = 500;
+  int y = 500;
+
+  void setup() {
+    size(500, 500);
+    background(thisThing, thisThing, thisThing); // R, G, B, A
+
+  }
+
+  void draw() {
+    if ( mousePressed ) {
+      fill(255, 255, 0);
+      noStroke();
+      ellipse(mouseX, mouseY, kittens, kittens);  // Draw a circles
+      stroke(255, 0, 0);
+      line( mouseX, mouseY, x, y);
+    }
+  }
+  {% endhighlight%}
+  </div>
 </div>

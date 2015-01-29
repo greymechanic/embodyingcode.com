@@ -109,7 +109,8 @@
 
 <ul>
   <li>Intros</li>
-  <li>Course Overview</li>
+  <li>Course Overview
+Background / examples</li>
   <li><a href="http://processing.org">Processing</a> workshop</li>
 </ul>
 
@@ -118,120 +119,120 @@
 <ul>
   <li>work on Processing sketches</li>
   <li>get authorized on the laser cutter if you aren’t already</li>
-  <li>get authorized in the io lab</li>
+  <li>Don’t forget about uthorizations @ 1PM in Michigan 427 (the io lab)</li>
   <li>read <a href="/assets/PDFs/touch_of_code.pdf">A Touch of Code</a> &amp; <a href="/assets/PDFs/villareal_code_as_medium.pdf">Code as Medium</a></li>
 </ul>
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
-<div id="js-expander-content" class="expander-content">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
+  <div id="js-expander-content" class="expander-content">
 
-    <h5 id="comments--basic-statements">Comments &amp; Basic Statements</h5>
+    <p>#####Comments &amp; Basic Statements</p>
 
     <p>Enter the following program header at the top of your program. Replace the
-placeholders, text with the <context>, with your own details or information requested.
-In every program you write in this class you will start with a program header.
-Don't forget to add these and then fill out the purpose section at the end of the exercise.</context></p>
+  placeholders, text with the <context>, with your own details or information requested.
+  In every program you write in this class you will start with a program header.
+  Don't forget to add these and then fill out the purpose section at the end of the exercise.</context></p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
-<span class="cm">Sketch 1</span>
-<span class="cm">Author: &lt;first name&gt; &lt;last name&gt;</span>
-<span class="cm">Date: &lt;today&#39;s date&gt;</span>
-<span class="cm">Detail: &lt;short paragraph explaining your sketch&gt;</span>
-<span class="cm">*/</span></code></pre></div>
+<span class="cm">  Sketch 1</span>
+<span class="cm">  Author: &lt;first name&gt; &lt;last name&gt;</span>
+<span class="cm">  Date: &lt;today&#39;s date&gt;</span>
+<span class="cm">  Detail: &lt;short paragraph explaining your sketch&gt;</span>
+<span class="cm">  */</span></code></pre></div>
 
     <p>The syntax <code>/*   */</code> denotes a block (multi-line) comment. A comment is a
-portion of the code that is ignored when being compiled. Comments are used for
-leaving notes or documentation within the code. The following syntax is an
-example of a single line comment.</p>
+  portion of the code that is ignored when being compiled. Comments are used for
+  leaving notes or documentation within the code. The following syntax is an
+  example of a single line comment.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// This is a single line comment</span></code></pre></div>
 
     <p>Now under your program header enter the following code, comment and all. You
-will learn more about these commands during the lecture and when reading the text.</p>
+  will learn more about these commands during the lecture and when reading the text.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">size</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="mi">800</span><span class="o">);</span> <span class="c1">// This sets the size of the window</span>
-<span class="n">background</span><span class="o">(</span><span class="mi">255</span><span class="o">);</span>  <span class="c1">// This sets the color of the background</span></code></pre></div>
+  <span class="n">background</span><span class="o">(</span><span class="mi">255</span><span class="o">);</span>  <span class="c1">// This sets the color of the background</span></code></pre></div>
 
     <p>Now click on <strong>Run</strong> and check out the larger window.</p>
 
     <p>Notice that the words <em>size</em> and <em>background</em> are blue in color within the PDE.
-This is called syntax highlighting. The editor knows that these are key words or
-valid instructions within the Processing language and colors them accordingly.</p>
+  This is called syntax highlighting. The editor knows that these are key words or
+  valid instructions within the Processing language and colors them accordingly.</p>
 
-    <h5 id="primitive-shapes">Primitive Shapes</h5>
-    <p>Under the background command enter the following to draw your first primitive shape.</p>
+    <p>##### Primitive Shapes
+  Under the background command enter the following to draw your first primitive shape.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ellipse</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">150</span><span class="o">,</span> <span class="mi">150</span><span class="o">);</span>  <span class="c1">// Draw a circle</span></code></pre></div>
 
     <p>The ellipse command draws an ellipse. The command takes four (4) parameters.
-View the following reference to understand how to use the command. Pay attention to
-the order of the parameters and what they are responsible for.See the <a href="http://processing.org/reference/ellipse_.html">Ellipse Docs</a>
-for more info.</p>
+  View the following reference to understand how to use the command. Pay attention to
+  the order of the parameters and what they are responsible for.See the <a href="http://processing.org/reference/ellipse_.html">Ellipse Docs</a>
+  for more info.</p>
 
     <p>Now try the following commands.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">line</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">800</span><span class="o">,</span> <span class="mi">800</span><span class="o">);</span> <span class="c1">// Draw a line</span>
-<span class="n">line</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">400</span><span class="o">,</span> <span class="mi">800</span><span class="o">,</span> <span class="mi">400</span><span class="o">);</span> <span class="c1">// Draw a line</span>
-<span class="n">rect</span><span class="o">(</span><span class="mi">300</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
+  <span class="n">line</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">400</span><span class="o">,</span> <span class="mi">800</span><span class="o">,</span> <span class="mi">400</span><span class="o">);</span> <span class="c1">// Draw a line</span>
+  <span class="n">rect</span><span class="o">(</span><span class="mi">300</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
 
     <p>Pay attention to the order and how the shapes are drawn on the screen. Your
-program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
-of the program. How the shapes are drawn on the screen reflect this. Each shape
-also has a point of origin and processing also has a particular way it lays out the screen.</p>
+  program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
+  of the program. How the shapes are drawn on the screen reflect this. Each shape
+  also has a point of origin and processing also has a particular way it lays out the screen.</p>
 
     <p>Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
-bottom-right is <em>width</em>, <em>height</em>.  The Y axis is vertical and X axis is the horizontal.
-Negative values are off screen and positive values move down and across respectively.
-The following is an excerpt from the text <em>Learning Processing</em>, by Daniel Shiffman.
-This quick read does a great job of explaining more about the coordinate system and
-how objects are drawn to the screen.</p>
+  bottom-right is <em>width</em>, <em>height</em>.  The Y axis is vertical and X axis is the horizontal.
+  Negative values are off screen and positive values move down and across respectively.
+  The following is an excerpt from the text <em>Learning Processing</em>, by Daniel Shiffman.
+  This quick read does a great job of explaining more about the coordinate system and
+  how objects are drawn to the screen.</p>
 
     <p><a href="http://processing.org/tutorials/drawing/">Drawing Tutorial</a></p>
 
     <p>Highlight the word line within the PDE. Now with the word highlighted go up to
-the <em>Help » Find in Reference</em> menu item. This will bring up a local copy of the
-Processing language reference. This is to make sure that you always have the help
-you need. Take a moment to read about the line and rect commands.</p>
+  the <em>Help » Find in Reference</em> menu item. This will bring up a local copy of the
+  Processing language reference. This is to make sure that you always have the help
+  you need. Take a moment to read about the line and rect commands.</p>
 
     <p>Now backup and enter the following between the background and ellipse command.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">smooth</span><span class="o">();</span>  <span class="c1">// turn on anti-aliasing or make my shapes look good</span>
-<span class="n">noFill</span><span class="o">();</span>  <span class="c1">// turn off the fill of the shapes</span></code></pre></div>
+  <span class="n">noFill</span><span class="o">();</span>  <span class="c1">// turn off the fill of the shapes</span></code></pre></div>
 
     <p>Notice that you can now see through the square within the program. You just
-turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.</p>
+  turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.</p>
 
   </div>
 </div>
 
 <div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, &amp; Variables</a>
-<div id="js-expander-content-2" class="expander-content">
+  <a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, &amp; Variables</a>
+  <div id="js-expander-content-2" class="expander-content">
 
     <p>Different shapes can be made in many different ways. Here are some of the most common shapes:</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">line</span><span class="o">(</span><span class="n">x1</span><span class="o">,</span> <span class="n">y1</span><span class="o">,</span> <span class="n">x2</span><span class="o">,</span> <span class="n">y2</span><span class="o">)</span>
-<span class="n">triangle</span><span class="o">(</span><span class="n">x1</span><span class="o">,</span> <span class="n">y1</span><span class="o">,</span> <span class="n">x2</span><span class="o">,</span> <span class="n">y2</span><span class="o">,</span> <span class="n">x3</span><span class="o">,</span> <span class="n">y3</span><span class="o">)</span>
-<span class="n">quad</span><span class="o">(</span><span class="n">x1</span><span class="o">,</span> <span class="n">y1</span><span class="o">,</span> <span class="n">x2</span><span class="o">,</span> <span class="n">y2</span><span class="o">,</span> <span class="n">x3</span><span class="o">,</span> <span class="n">y3</span><span class="o">,</span> <span class="n">x4</span><span class="o">,</span> <span class="n">y4</span><span class="o">)</span>
-<span class="n">rect</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">)</span>
-<span class="n">ellipse</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">)</span>
-<span class="n">arc</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">stop</span><span class="o">)</span></code></pre></div>
+  <span class="n">triangle</span><span class="o">(</span><span class="n">x1</span><span class="o">,</span> <span class="n">y1</span><span class="o">,</span> <span class="n">x2</span><span class="o">,</span> <span class="n">y2</span><span class="o">,</span> <span class="n">x3</span><span class="o">,</span> <span class="n">y3</span><span class="o">)</span>
+  <span class="n">quad</span><span class="o">(</span><span class="n">x1</span><span class="o">,</span> <span class="n">y1</span><span class="o">,</span> <span class="n">x2</span><span class="o">,</span> <span class="n">y2</span><span class="o">,</span> <span class="n">x3</span><span class="o">,</span> <span class="n">y3</span><span class="o">,</span> <span class="n">x4</span><span class="o">,</span> <span class="n">y4</span><span class="o">)</span>
+  <span class="n">rect</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">)</span>
+  <span class="n">ellipse</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">)</span>
+  <span class="n">arc</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">stop</span><span class="o">)</span></code></pre></div>
 
-    <h4 id="helpful-properties">Helpful Properties:</h4>
+    <p>#### Helpful Properties:</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">smooth</span><span class="o">()</span> <span class="c1">// blends edges to create smooth lines</span>
-<span class="n">noSmooth</span><span class="o">()</span> <span class="c1">// does the opposite</span>
-<span class="n">strokeWeight</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="c1">//By default stroke weight is 1px,strokeWeight allows you to increase the stroke of drawn lines</span>
-<span class="n">noStroke</span><span class="o">()</span> <span class="c1">//this function does not take a variable, it simple doesn&#39;t draw a stroke</span></code></pre></div>
+  <span class="n">noSmooth</span><span class="o">()</span> <span class="c1">// does the opposite</span>
+  <span class="n">strokeWeight</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="c1">//By default stroke weight is 1px,strokeWeight allows you to increase the stroke of drawn lines</span>
+  <span class="n">noStroke</span><span class="o">()</span> <span class="c1">//this function does not take a variable, it simple doesn&#39;t draw a stroke</span></code></pre></div>
 
-    <h4 id="transparency">Transparency:</h4>
+    <p>#### Transparency:</p>
 
     <p>The following functions control colors in your sketches</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">background</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="c1">// sets the background</span>
-<span class="n">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="c1">// fills any shape that comes after it in sequence</span>
-<span class="n">stroke</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="c1">// sets the stroke color for anything following</span></code></pre></div>
+  <span class="n">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="c1">// fills any shape that comes after it in sequence</span>
+  <span class="n">stroke</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="c1">// sets the stroke color for anything following</span></code></pre></div>
 
     <p>By adding a fourth parameter to these we can change the alpha value of the color, or the transparency</p>
 
@@ -240,111 +241,111 @@ turned the shapes fill off. You also turned antialiasing on which smooths out yo
     <p>-Adding a transparency allows us to blend shapes and colors together.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">background</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
-<span class="n">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
-<span class="n">stroke</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span></code></pre></div>
+  <span class="n">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
+  <span class="n">stroke</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span></code></pre></div>
 
-    <h4 id="variables">Variables</h4>
+    <p>#### Variables</p>
 
     <p>Similar to the variables we know from algebra, Processing uses variables to store a value.
-If we write x = 1, we know that if we see an x we can say it has a value of 1.</p>
+  If we write x = 1, we know that if we see an x we can say it has a value of 1.</p>
 
-    <h5 id="data-types">Data Types</h5>
+    <p>##### Data Types</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Integer - This is only whole number values</span>
-<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="c1">// Float - Can contain decimal places</span>
-<span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">20.5</span></code></pre></div>
+  <span class="c1">// Float - Can contain decimal places</span>
+  <span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">20.5</span></code></pre></div>
 
-    <h4 id="iteration-w-loops">Iteration w/ loops</h4>
+    <p>#### Iteration w/ loops</p>
 
     <p>Iteration is a way of controlling repetition. There are two different structures for doing so.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// for loop</span>
-<span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">)</span> <span class="o">{</span>
-  <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="c1">// while loop</span>
-
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-
-<span class="k">while</span> <span class="o">(</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="o">)</span> <span class="o">{</span>
-  <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
-  <span class="n">i</span><span class="o">++;</span>
-<span class="o">}</span></code></pre></div>
-
-  </div>
-</div>
-
-<div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
-<div id="js-expander-content-3" class="expander-content">
-
-    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
-<span class="cm">Processing Demo 1</span>
-<span class="cm">Author: Andrew Kaye</span>
-<span class="cm">Date: 01/26/2015</span>
-<span class="cm">Detail: Getting started with Processing</span>
-<span class="cm">*/</span>
-
-<span class="n">size</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span><span class="mi">500</span><span class="o">);</span>
-<span class="n">background</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
-
-<span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span>
-<span class="n">ellipse</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">40</span><span class="o">);</span>  <span class="c1">// Draw a circle</span>
-
-<span class="c1">//drawing lines in the window</span>
-<span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">);</span>
-<span class="n">line</span><span class="o">(</span><span class="mi">60</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">40</span><span class="o">,</span><span class="mi">70</span><span class="o">);</span>
-<span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">40</span><span class="o">);</span>
-
-<span class="c1">// change stroke weight &amp; draw a new line</span>
-<span class="n">strokeWeight</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
-<span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span>
-
-<span class="c1">// add a stroke color and change the weight again</span>
-<span class="n">stroke</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">12</span><span class="o">);</span>
-<span class="n">strokeWeight</span><span class="o">(</span><span class="mi">8</span><span class="o">);</span>
-
-<span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span> <span class="mi">120</span><span class="o">);</span>
-<span class="n">rect</span><span class="o">(</span><span class="mi">490</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
-
-  </div>
-</div>
-
-<div class="expander">
-<a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
-<div id="js-expander-content-4" class="expander-content">
-
-    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
-<span class="cm">Processing Demo 2</span>
-<span class="cm">Author: Andrew Kaye</span>
-<span class="cm">Date: 01/26/2015</span>
-<span class="cm">Detail: Working with variables and basic logic</span>
-<span class="cm">*/</span>
-
-<span class="kt">int</span> <span class="n">thisThing</span> <span class="o">=</span> <span class="mi">150</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">kittens</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
-
-<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
-
-<span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
-  <span class="n">size</span><span class="o">(</span><span class="mi">500</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
-  <span class="n">background</span><span class="o">(</span><span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
-
-<span class="o">}</span>
-
-<span class="kt">void</span> <span class="nf">draw</span><span class="o">()</span> <span class="o">{</span>
-  <span class="k">if</span> <span class="o">(</span> <span class="n">mousePressed</span> <span class="o">)</span> <span class="o">{</span>
-    <span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-    <span class="n">noStroke</span><span class="o">();</span>
-    <span class="n">ellipse</span><span class="o">(</span><span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">kittens</span><span class="o">,</span> <span class="n">kittens</span><span class="o">);</span>  <span class="c1">// Draw a circles</span>
-    <span class="n">stroke</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-    <span class="n">line</span><span class="o">(</span> <span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+  <span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">)</span> <span class="o">{</span>
+    <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
+
+  <span class="c1">// while loop</span>
+
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+  <span class="k">while</span> <span class="o">(</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="o">)</span> <span class="o">{</span>
+    <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
+    <span class="n">i</span><span class="o">++;</span>
+  <span class="o">}</span></code></pre></div>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger-3" class="expander-trigger expander-hidden demo">Processing Demo #1</a>
+  <div id="js-expander-content-3" class="expander-content">
+
+    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
+<span class="cm">  Processing Demo 1</span>
+<span class="cm">  Author: Andrew Kaye</span>
+<span class="cm">  Date: 01/26/2015</span>
+<span class="cm">  Detail: Getting started with Processing</span>
+<span class="cm">  */</span>
+
+  <span class="n">size</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span><span class="mi">500</span><span class="o">);</span>
+  <span class="n">background</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
+
+  <span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span>
+  <span class="n">ellipse</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">40</span><span class="o">);</span>  <span class="c1">// Draw a circle</span>
+
+  <span class="c1">//drawing lines in the window</span>
+  <span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">);</span>
+  <span class="n">line</span><span class="o">(</span><span class="mi">60</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">40</span><span class="o">,</span><span class="mi">70</span><span class="o">);</span>
+  <span class="n">line</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">40</span><span class="o">);</span>
+
+  <span class="c1">// change stroke weight &amp; draw a new line</span>
+  <span class="n">strokeWeight</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+  <span class="n">line</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span>
+
+  <span class="c1">// add a stroke color and change the weight again</span>
+  <span class="n">stroke</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">12</span><span class="o">);</span>
+  <span class="n">strokeWeight</span><span class="o">(</span><span class="mi">8</span><span class="o">);</span>
+
+  <span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span> <span class="mi">120</span><span class="o">);</span>
+  <span class="n">rect</span><span class="o">(</span><span class="mi">490</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger-4" class="expander-trigger expander-hidden demo">Processing Demo #2</a>
+  <div id="js-expander-content-4" class="expander-content">
+
+    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
+<span class="cm">  Processing Demo 2</span>
+<span class="cm">  Author: Andrew Kaye</span>
+<span class="cm">  Date: 01/26/2015</span>
+<span class="cm">  Detail: Working with variables and basic logic</span>
+<span class="cm">  */</span>
+
+  <span class="kt">int</span> <span class="n">thisThing</span> <span class="o">=</span> <span class="mi">150</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">kittens</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+
+  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
+
+  <span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">size</span><span class="o">(</span><span class="mi">500</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+    <span class="n">background</span><span class="o">(</span><span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">,</span> <span class="n">thisThing</span><span class="o">);</span> <span class="c1">// R, G, B, A</span>
+
+  <span class="o">}</span>
+
+  <span class="kt">void</span> <span class="nf">draw</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span> <span class="n">mousePressed</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="n">fill</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+      <span class="n">noStroke</span><span class="o">();</span>
+      <span class="n">ellipse</span><span class="o">(</span><span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">kittens</span><span class="o">,</span> <span class="n">kittens</span><span class="o">);</span>  <span class="c1">// Draw a circles</span>
+      <span class="n">stroke</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+      <span class="n">line</span><span class="o">(</span> <span class="n">mouseX</span><span class="o">,</span> <span class="n">mouseY</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span></code></pre></div>
 
   </div>
 </div>

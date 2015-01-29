@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Three"
+subtitle: "Software Study"
+date:   2015-02-09 07:00:00
+published: false
+categories: >
+  week
+  class
+---
+
+> Software is deeply woven into contemporary life—economically, culturally,
+creatively, politically—in manners both obvious and nearly invisible. Yet
+while much is written about how software is used, and the activities that
+it supports and shapes, thinking about software itself has remained largely
+technical for much of its history. Increasingly, however, artists, scientists,
+engineers, hackers, designers, and scholars in the humanities and social
+sciences are finding that for the questions they face, and the things they
+need to build, an expanded understanding of software is necessary. For
+such understanding they can call upon a strand of texts in the history of
+computing and new media, they can take part in the rich implicit culture of
+software, and they can also take part in the development of an emerging,
+fundamentally transdisciplinary, computational literacy. These provide the
+foundation for software studies.
+
+*here's what we'll cover:*
+
+- this
