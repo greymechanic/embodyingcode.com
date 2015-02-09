@@ -123,7 +123,7 @@ categories: >
   <a href="javascript:void(0)" id="js-expander-trigger-2" class="expander-trigger expander-hidden demo">Shapes, Colors, & Variables</a>
   <div id="js-expander-content-2" class="expander-content" markdown="1">
 
-  Different shapes can be made in many different ways. Here are some of the most common shapes:
+Different shapes can be made in many different ways. Here are some of the most common shapes:
 
   {% highlight java %}
   line(x1, y1, x2, y2)
@@ -134,7 +134,7 @@ categories: >
   arc(x, y, width, height, start, stop)
   {% endhighlight %}
 
-  #### Helpful Properties:
+#### Helpful Properties:
 
   {% highlight java %}
   smooth() // blends edges to create smooth lines
@@ -143,9 +143,9 @@ categories: >
   noStroke() //this function does not take a variable, it simple doesn't draw a stroke
   {% endhighlight %}
 
-  #### Transparency:
+#### Transparency:
 
-  The following functions control colors in your sketches
+The following functions control colors in your sketches
 
   {% highlight java %}
   background(r, g, b) // sets the background
@@ -153,12 +153,12 @@ categories: >
   stroke(r, g, b) // sets the stroke color for anything following
   {% endhighlight %}
 
-  By adding a fourth parameter to these we can change the alpha value of the color, or the transparency
+By adding a fourth parameter to these we can change the alpha value of the color, or the transparency
 
-  ![RGBA](/assets/rgb.jpg)
+![RGBA](/assets/rgb.jpg)
 
 
-  -Adding a transparency allows us to blend shapes and colors together.
+-Adding a transparency allows us to blend shapes and colors together.
 
   {% highlight java %}
   background(r, g, b, a)
@@ -166,12 +166,12 @@ categories: >
   stroke(r, g, b, a)
   {% endhighlight %}
 
-  #### Variables
+#### Variables
 
-  Similar to the variables we know from algebra, Processing uses variables to store a value.
-  If we write x = 1, we know that if we see an x we can say it has a value of 1.
+Similar to the variables we know from algebra, Processing uses variables to store a value.
+If we write x = 1, we know that if we see an x we can say it has a value of 1.
 
-  ##### Data Types
+##### Data Types
 
   {% highlight java %}
   // Integer - This is only whole number values
@@ -181,9 +181,9 @@ categories: >
   float y = 20.5  
   {% endhighlight %}
 
-  #### Iteration w/ loops
+#### Iteration w/ loops
 
-  Iteration is a way of controlling repetition. There are two different structures for doing so.
+Iteration is a way of controlling repetition. There are two different structures for doing so.
 
   {% highlight java %}
   // for loop

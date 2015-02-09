@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Three"
-subtitle: "Software Study"
+subtitle: "Code Poems"
 date:   2015-02-09 07:00:00
-published: false
+published: true
 categories: >
   week
   class
@@ -25,4 +25,263 @@ foundation for software studies.
 
 *here's what we'll cover:*
 
-- this
+- look at p5 sketches
+- recap previous reading
+- Processing Part II
+
+*for next week:*
+
+- [watch Zach Lieberman talk about code poems](http://vimeo.com/69437363)
+- continue working on project 1
+
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Conditionals</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+Conditionals allow your program to perform different computations or actions depending on whether a
+programmer-specified condition evaluates to true or false. -wikipeda
+
+#####Conditional Operators
+    // RELATIONAL OPERATORS
+        < //less than
+        >= // greater than or equal to
+        == // equality
+        <= // less than or equal to
+        > // greater than
+        != // inequality
+
+    // LOGICAL OPERATORS
+        || // logical OR
+        && // logical AND
+        ! // logical NOT
+
+#####Conditional Statements
+    //if statement
+        if(expression) {
+            statements
+        }
+    //if else
+        if(expression) {
+            statements
+        }
+        else {
+            statements
+        }
+    //if else if
+        if(expression) {
+            statements
+        }
+        else if(expression) {
+            statements
+        }
+        else {
+            statements
+        }
+
+#####Keyboard Input
+    if(keyPressed == true){
+       //code will run when a key is pressed
+    }
+    if(keyPressed == true) && (key == ‘a’)){
+        //code will run when a key is pressed
+        //AND that key is the ‘a’ key
+    }
+    //is alphanumeric
+    if((keyPressed == true) && (key >= 32) && (key <= 126)){
+        println(key);
+    }
+
+#####Switch Statements
+Switch works like an if else, but for multiple else statements. It’s referred to as a switch case
+statement.
+
+    void keyPressed(){
+       if(keyCoded){
+           switch(keyCode){
+               case ‘a’:
+               println “You pressed the a key.”;
+           break;
+               case ‘b’:
+               println “You pressed the b key.”;
+           break;
+               default:
+               println “Key not supported.”
+           break;
+       }
+    }
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger2" class="expander-trigger expander-hidden demo">Images</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+
+Displaying an image is a three step process.
+
+    PImage img; 
+    img = loadImage("myImage.jpg"); 
+    image(img, 0, 0);
+
+**PImage img** - First, you must use the PImage datatype to initialize a variable.
+
+**img = loadImage("myImage.jpg")** - Second, you have to load in an image with loadImage.  The image must be in your sketch's data folder.
+
+**image(img, 0, 0)** - Finally use the image function to display the image.
+
+
+
+#######Try this example: File -> Examples -> Basics -> Image -> LoadDisplayImage
+
+_Images can be used in the background function, however the image size and the sketch size need to be the same._
+
+    background(img);
+
+####PImage Methods:
+
+tint – used to tint an image or set an image’s alpha value 
+
+filter – THRESHOLD, GRAY, INVERT, POSTERIZE, BLUR, OPAQUE, ERODE, or DILATE 
+
+blend – blend two or more images together 
+
+copy – copy pixels from one part of the window to another
+
+    PImage img; 
+    img = loadImage("myImage.jpg"); 
+    image(img, 0, 0); 
+    filter(POSTERIZE, 6);
+
+Read: http://processing.org/reference/PImage.html for more info
+
+
+####Pixels
+Working with individual pixels is done through the get and set methods.
+
+`get()`
+
+`set()`
+
+Example: File -> Examples -> Basics -> Image -> Pointillism
+
+</div>
+</div>
+
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Animation</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+
+We've looked at many ways to introduce animations into our sketches, but we've only scratched the surface. Processing allows for advanced interaction and complex motion/ behavior.
+
+#####Examples
+File -> Examples -> Topics -> Animation -> Sequential
+
+In this example the images for the animation are loaded into an array.  An array [ ]  is a datatype that is used to store a group of like data.  The stored information can be accessed and changed at any time during the duration of the program.  Reference the example on the portal as it’s too long for this page.
+
+###Arrays
+A container structure for storing like kind data.
+
+* [] - array access operator
+* Arrays are zero based
+    * that location 0 is the first element, location 1 is the second, and so on
+    * that an array of length 10 is numbered 0 through 9
+* Items within arrays are referred to as elements
+
+**Assigning & Accessing**
+
+Assigning data to elements within an array
+
+`myArray[0] = 50.5;`
+
+Accessing elements within the array
+
+`println(myArray[0]);`
+
+**Methods**
+
+length - returns the length of the array
+
+`myArray.length`
+
+
+</div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Putting it All Together</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+
+    int w, h;
+    int offset;
+
+    boolean oneShot;
+
+    int numPoints;
+
+    // establish arrays to store values
+    float r[] = new float[50];
+    float g[] = new float[50];
+    float b[] = new float[50];
+
+    float vertexX[] = new float[50];
+    float vertexY[] = new float[50];
+
+    void setup() {
+
+      oneShot = false;
+      offset = 50;
+      numPoints = 50;
+
+      size(1000,1000);
+      width = 1000;
+      height = 1000;
+
+      // fill the arrays with random values (use width and height as constraints for location)
+      // pick random colors for each R, G, & B value
+      for(int j = 0; j < numPoints; j ++){
+          r[j] = random(255);
+          g[j] = random(255);
+          b[j] = random(255);
+          vertexX[j] = random(width);
+          vertexY[j] = random(height);
+      }
+
+    }
+
+    void draw() {  
+      background(120,120,120);
+      stroke(0, 120);
+
+      // first draw circled at all 50 locations
+      for(int j = 0; j < numPoints; j ++){
+        ellipse(vertexX[j], vertexY[j], 8, 8);
+      }
+
+      // use a nested for loop to draw lines between all points
+      for(int x = 0; x < numPoints; x ++){
+          for(int y = 0; y < numPoints; y ++){
+              stroke(r[y], g[y], b[y],127);
+              line(vertexX[x], vertexY[x], vertexX[y], vertexY[y]);
+          }
+      }
+    }
+
+    void keyPressed() {
+      if (key == 'R' || key == 'r') {
+        for(int j = 0; j < numPoints; j ++){
+            r[j] = random(255);
+            g[j] = random(255);
+            b[j] = random(255);
+            vertexX[j] = random(width);
+            vertexY[j] = random(height);
+        }
+      }
+    }
+
+</div>
+</div>

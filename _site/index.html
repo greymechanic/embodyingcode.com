@@ -219,14 +219,14 @@ Background / examples</li>
   <span class="n">ellipse</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">)</span>
   <span class="n">arc</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">stop</span><span class="o">)</span></code></pre></div>
 
-    <p>#### Helpful Properties:</p>
+    <h4 id="helpful-properties">Helpful Properties:</h4>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">smooth</span><span class="o">()</span> <span class="c1">// blends edges to create smooth lines</span>
   <span class="n">noSmooth</span><span class="o">()</span> <span class="c1">// does the opposite</span>
   <span class="n">strokeWeight</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="c1">//By default stroke weight is 1px,strokeWeight allows you to increase the stroke of drawn lines</span>
   <span class="n">noStroke</span><span class="o">()</span> <span class="c1">//this function does not take a variable, it simple doesn&#39;t draw a stroke</span></code></pre></div>
 
-    <p>#### Transparency:</p>
+    <h4 id="transparency">Transparency:</h4>
 
     <p>The following functions control colors in your sketches</p>
 
@@ -244,12 +244,12 @@ Background / examples</li>
   <span class="n">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
   <span class="n">stroke</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span></code></pre></div>
 
-    <p>#### Variables</p>
+    <h4 id="variables">Variables</h4>
 
     <p>Similar to the variables we know from algebra, Processing uses variables to store a value.
-  If we write x = 1, we know that if we see an x we can say it has a value of 1.</p>
+If we write x = 1, we know that if we see an x we can say it has a value of 1.</p>
 
-    <p>##### Data Types</p>
+    <h5 id="data-types">Data Types</h5>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Integer - This is only whole number values</span>
   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -257,7 +257,7 @@ Background / examples</li>
   <span class="c1">// Float - Can contain decimal places</span>
   <span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">20.5</span></code></pre></div>
 
-    <p>#### Iteration w/ loops</p>
+    <h4 id="iteration-w-loops">Iteration w/ loops</h4>
 
     <p>Iteration is a way of controlling repetition. There are two different structures for doing so.</p>
 
@@ -370,6 +370,308 @@ Background / examples</li>
       </article>
     </li>
     
+    <li id="Three">
+      
+      <h1 class="post-title">
+        <!-- <a class="post-link" href="/week/class/2015/02/09/three.html"> -->
+        
+        Code Poems
+        
+        <!-- </a> -->
+        <span class="post-meta">Feb 9</span>
+      </h1>
+      
+      <article class="post-content">
+        <blockquote>
+  <p>Software is deeply woven into contemporary life—economically, culturally,
+creatively, politically—in manners both obvious and nearly invisible. Yet
+while much is written about how software is used, and the activities that
+it supports and shapes, thinking about software itself has remained largely
+technical for much of its history. Increasingly, however, artists, scientists,
+engineers, hackers, designers, and scholars in the humanities and social
+sciences are finding that for the questions they face, and the things they
+need to build, an expanded understanding of software is necessary. For
+such understanding they can call upon a strand of texts in the history of
+computing and new media, they can take part in the rich implicit culture of
+software, and they can also take part in the development of an emerging,
+fundamentally transdisciplinary, computational literacy. These provide the
+foundation for software studies.</p>
+</blockquote>
+
+<p><em>here’s what we’ll cover:</em></p>
+
+<ul>
+  <li>look at p5 sketches</li>
+  <li>recap previous reading</li>
+  <li>Processing Part II</li>
+</ul>
+
+<p><em>for next week:</em></p>
+
+<ul>
+  <li><a href="http://vimeo.com/69437363">watch Zach Lieberman talk about code poems</a></li>
+  <li>continue working on project 1</li>
+</ul>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Conditionals</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <p>Conditionals allow your program to perform different computations or actions depending on whether a
+programmer-specified condition evaluates to true or false. -wikipeda</p>
+
+    <h5 id="conditional-operators">Conditional Operators</h5>
+    <pre><code>// RELATIONAL OPERATORS
+    &lt; //less than
+    &gt;= // greater than or equal to
+    == // equality
+    &lt;= // less than or equal to
+    &gt; // greater than
+    != // inequality
+
+// LOGICAL OPERATORS
+    || // logical OR
+    &amp;&amp; // logical AND
+    ! // logical NOT
+</code></pre>
+
+    <h5 id="conditional-statements">Conditional Statements</h5>
+    <pre><code>//if statement
+    if(expression) {
+        statements
+    }
+//if else
+    if(expression) {
+        statements
+    }
+    else {
+        statements
+    }
+//if else if
+    if(expression) {
+        statements
+    }
+    else if(expression) {
+        statements
+    }
+    else {
+        statements
+    }
+</code></pre>
+
+    <h5 id="keyboard-input">Keyboard Input</h5>
+    <pre><code>if(keyPressed == true){
+   //code will run when a key is pressed
+}
+if(keyPressed == true) &amp;&amp; (key == ‘a’)){
+    //code will run when a key is pressed
+    //AND that key is the ‘a’ key
+}
+//is alphanumeric
+if((keyPressed == true) &amp;&amp; (key &gt;= 32) &amp;&amp; (key &lt;= 126)){
+    println(key);
+}
+</code></pre>
+
+    <h5 id="switch-statements">Switch Statements</h5>
+    <p>Switch works like an if else, but for multiple else statements. It’s referred to as a switch case
+statement.</p>
+
+    <pre><code>void keyPressed(){
+   if(keyCoded){
+       switch(keyCode){
+           case ‘a’:
+           println “You pressed the a key.”;
+       break;
+           case ‘b’:
+           println “You pressed the b key.”;
+       break;
+           default:
+           println “Key not supported.”
+       break;
+   }
+}
+</code></pre>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger2" class="expander-trigger expander-hidden demo">Images</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <p>Displaying an image is a three step process.</p>
+
+    <pre><code>PImage img; 
+img = loadImage("myImage.jpg"); 
+image(img, 0, 0);
+</code></pre>
+
+    <p><strong>PImage img</strong> - First, you must use the PImage datatype to initialize a variable.</p>
+
+    <p><strong>img = loadImage(“myImage.jpg”)</strong> - Second, you have to load in an image with loadImage.  The image must be in your sketch’s data folder.</p>
+
+    <p><strong>image(img, 0, 0)</strong> - Finally use the image function to display the image.</p>
+
+    <h6 id="try-this-example-file---examples---basics---image---loaddisplayimage">#Try this example: File -&gt; Examples -&gt; Basics -&gt; Image -&gt; LoadDisplayImage</h6>
+
+    <p><em>Images can be used in the background function, however the image size and the sketch size need to be the same.</em></p>
+
+    <pre><code>background(img);
+</code></pre>
+
+    <h4 id="pimage-methods">PImage Methods:</h4>
+
+    <p>tint – used to tint an image or set an image’s alpha value </p>
+
+    <p>filter – THRESHOLD, GRAY, INVERT, POSTERIZE, BLUR, OPAQUE, ERODE, or DILATE </p>
+
+    <p>blend – blend two or more images together </p>
+
+    <p>copy – copy pixels from one part of the window to another</p>
+
+    <pre><code>PImage img; 
+img = loadImage("myImage.jpg"); 
+image(img, 0, 0); 
+filter(POSTERIZE, 6);
+</code></pre>
+
+    <p>Read: http://processing.org/reference/PImage.html for more info</p>
+
+    <h4 id="pixels">Pixels</h4>
+    <p>Working with individual pixels is done through the get and set methods.</p>
+
+    <p><code>get()</code></p>
+
+    <p><code>set()</code></p>
+
+    <p>Example: File -&gt; Examples -&gt; Basics -&gt; Image -&gt; Pointillism</p>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Animation</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <p>We’ve looked at many ways to introduce animations into our sketches, but we’ve only scratched the surface. Processing allows for advanced interaction and complex motion/ behavior.</p>
+
+    <h5 id="examples">Examples</h5>
+    <p>File -&gt; Examples -&gt; Topics -&gt; Animation -&gt; Sequential</p>
+
+    <p>In this example the images for the animation are loaded into an array.  An array [ ]  is a datatype that is used to store a group of like data.  The stored information can be accessed and changed at any time during the duration of the program.  Reference the example on the portal as it’s too long for this page.</p>
+
+    <h3 id="arrays">Arrays</h3>
+    <p>A container structure for storing like kind data.</p>
+
+    <ul>
+      <li>[] - array access operator</li>
+      <li>Arrays are zero based
+        <ul>
+          <li>that location 0 is the first element, location 1 is the second, and so on</li>
+          <li>that an array of length 10 is numbered 0 through 9</li>
+        </ul>
+      </li>
+      <li>Items within arrays are referred to as elements</li>
+    </ul>
+
+    <p><strong>Assigning &amp; Accessing</strong></p>
+
+    <p>Assigning data to elements within an array</p>
+
+    <p><code>myArray[0] = 50.5;</code></p>
+
+    <p>Accessing elements within the array</p>
+
+    <p><code>println(myArray[0]);</code></p>
+
+    <p><strong>Methods</strong></p>
+
+    <p>length - returns the length of the array</p>
+
+    <p><code>myArray.length</code></p>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Putting it All Together</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>int w, h;
+int offset;
+
+boolean oneShot;
+
+int numPoints;
+
+// establish arrays to store values
+float r[] = new float[50];
+float g[] = new float[50];
+float b[] = new float[50];
+
+float vertexX[] = new float[50];
+float vertexY[] = new float[50];
+
+void setup() {
+
+  oneShot = false;
+  offset = 50;
+  numPoints = 50;
+
+  size(1000,1000);
+  width = 1000;
+  height = 1000;
+
+  // fill the arrays with random values (use width and height as constraints for location)
+  // pick random colors for each R, G, &amp; B value
+  for(int j = 0; j &lt; numPoints; j ++){
+      r[j] = random(255);
+      g[j] = random(255);
+      b[j] = random(255);
+      vertexX[j] = random(width);
+      vertexY[j] = random(height);
+  }
+
+}
+
+void draw() {  
+  background(120,120,120);
+  stroke(0, 120);
+
+  // first draw circled at all 50 locations
+  for(int j = 0; j &lt; numPoints; j ++){
+    ellipse(vertexX[j], vertexY[j], 8, 8);
+  }
+
+  // use a nested for loop to draw lines between all points
+  for(int x = 0; x &lt; numPoints; x ++){
+      for(int y = 0; y &lt; numPoints; y ++){
+          stroke(r[y], g[y], b[y],127);
+          line(vertexX[x], vertexY[x], vertexX[y], vertexY[y]);
+      }
+  }
+}
+
+void keyPressed() {
+  if (key == 'R' || key == 'r') {
+    for(int j = 0; j &lt; numPoints; j ++){
+        r[j] = random(255);
+        g[j] = random(255);
+        b[j] = random(255);
+        vertexX[j] = random(width);
+        vertexY[j] = random(height);
+    }
+  }
+}
+</code></pre>
+
+  </div>
+</div>
+
+      </article>
+    </li>
+    
   </ul>
 
 </div>
@@ -459,6 +761,12 @@ Background / examples</li>
     
     <li><a class="scroll-on-page-link" href="#Two">
       Week Two
+    </a></li>
+    
+    
+    
+    <li><a class="scroll-on-page-link" href="#Three">
+      Week Three
     </a></li>
     
     
