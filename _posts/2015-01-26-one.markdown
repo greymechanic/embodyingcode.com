@@ -20,8 +20,8 @@ categories: >
 
 - work on Processing sketches
 - get authorized on the laser cutter if you aren't already
-- Don't forget about uthorizations @ 1PM in Michigan 427 (the io lab)
-- read [A Touch of Code](/assets/PDFs/touch_of_code.pdf) & [Code as Medium](/assets/PDFs/villareal_code_as_medium.pdf)
+- Don't forget about authorizations @ 1PM in Michigan 427 (the io lab)
+- read [A Touch of Code]({{ "/assets/pdfs/touch_of_code.pdf" | prepend: site.baseurl }}) & [Code as Medium]({{ "/assets/pdfs/villareal_code_as_medium.pdf" | prepend: site.baseurl }})
 
 <div class="expander">
   <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
