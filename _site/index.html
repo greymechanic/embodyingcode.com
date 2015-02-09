@@ -127,12 +127,12 @@ Background / examples</li>
   <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
   <div id="js-expander-content" class="expander-content">
 
-    <p>#####Comments &amp; Basic Statements</p>
+    <h5 id="comments--basic-statements">Comments &amp; Basic Statements</h5>
 
     <p>Enter the following program header at the top of your program. Replace the
-  placeholders, text with the <context>, with your own details or information requested.
-  In every program you write in this class you will start with a program header.
-  Don't forget to add these and then fill out the purpose section at the end of the exercise.</context></p>
+placeholders, text with the <context>, with your own details or information requested.
+In every program you write in this class you will start with a program header.
+Don't forget to add these and then fill out the purpose section at the end of the exercise.</context></p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
 <span class="cm">  Sketch 1</span>
@@ -142,14 +142,14 @@ Background / examples</li>
 <span class="cm">  */</span></code></pre></div>
 
     <p>The syntax <code>/*   */</code> denotes a block (multi-line) comment. A comment is a
-  portion of the code that is ignored when being compiled. Comments are used for
-  leaving notes or documentation within the code. The following syntax is an
-  example of a single line comment.</p>
+portion of the code that is ignored when being compiled. Comments are used for
+leaving notes or documentation within the code. The following syntax is an
+example of a single line comment.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// This is a single line comment</span></code></pre></div>
 
     <p>Now under your program header enter the following code, comment and all. You
-  will learn more about these commands during the lecture and when reading the text.</p>
+will learn more about these commands during the lecture and when reading the text.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">size</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="mi">800</span><span class="o">);</span> <span class="c1">// This sets the size of the window</span>
   <span class="n">background</span><span class="o">(</span><span class="mi">255</span><span class="o">);</span>  <span class="c1">// This sets the color of the background</span></code></pre></div>
@@ -157,18 +157,18 @@ Background / examples</li>
     <p>Now click on <strong>Run</strong> and check out the larger window.</p>
 
     <p>Notice that the words <em>size</em> and <em>background</em> are blue in color within the PDE.
-  This is called syntax highlighting. The editor knows that these are key words or
-  valid instructions within the Processing language and colors them accordingly.</p>
+This is called syntax highlighting. The editor knows that these are key words or
+valid instructions within the Processing language and colors them accordingly.</p>
 
-    <p>##### Primitive Shapes
-  Under the background command enter the following to draw your first primitive shape.</p>
+    <h5 id="primitive-shapes">Primitive Shapes</h5>
+    <p>Under the background command enter the following to draw your first primitive shape.</p>
 
     <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ellipse</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">150</span><span class="o">,</span> <span class="mi">150</span><span class="o">);</span>  <span class="c1">// Draw a circle</span></code></pre></div>
 
     <p>The ellipse command draws an ellipse. The command takes four (4) parameters.
-  View the following reference to understand how to use the command. Pay attention to
-  the order of the parameters and what they are responsible for.See the <a href="http://processing.org/reference/ellipse_.html">Ellipse Docs</a>
-  for more info.</p>
+View the following reference to understand how to use the command. Pay attention to
+the order of the parameters and what they are responsible for.See the <a href="http://processing.org/reference/ellipse_.html">Ellipse Docs</a>
+for more info.</p>
 
     <p>Now try the following commands.</p>
 
@@ -177,23 +177,23 @@ Background / examples</li>
   <span class="n">rect</span><span class="o">(</span><span class="mi">300</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span> <span class="c1">// Draw a square</span></code></pre></div>
 
     <p>Pay attention to the order and how the shapes are drawn on the screen. Your
-  program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
-  of the program. How the shapes are drawn on the screen reflect this. Each shape
-  also has a point of origin and processing also has a particular way it lays out the screen.</p>
+program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
+of the program. How the shapes are drawn on the screen reflect this. Each shape
+also has a point of origin and processing also has a particular way it lays out the screen.</p>
 
     <p>Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
-  bottom-right is <em>width</em>, <em>height</em>.  The Y axis is vertical and X axis is the horizontal.
-  Negative values are off screen and positive values move down and across respectively.
-  The following is an excerpt from the text <em>Learning Processing</em>, by Daniel Shiffman.
-  This quick read does a great job of explaining more about the coordinate system and
-  how objects are drawn to the screen.</p>
+bottom-right is <em>width</em>, <em>height</em>.  The Y axis is vertical and X axis is the horizontal.
+Negative values are off screen and positive values move down and across respectively.
+The following is an excerpt from the text <em>Learning Processing</em>, by Daniel Shiffman.
+This quick read does a great job of explaining more about the coordinate system and
+how objects are drawn to the screen.</p>
 
     <p><a href="http://processing.org/tutorials/drawing/">Drawing Tutorial</a></p>
 
     <p>Highlight the word line within the PDE. Now with the word highlighted go up to
-  the <em>Help » Find in Reference</em> menu item. This will bring up a local copy of the
-  Processing language reference. This is to make sure that you always have the help
-  you need. Take a moment to read about the line and rect commands.</p>
+the <em>Help » Find in Reference</em> menu item. This will bring up a local copy of the
+Processing language reference. This is to make sure that you always have the help
+you need. Take a moment to read about the line and rect commands.</p>
 
     <p>Now backup and enter the following between the background and ellipse command.</p>
 
@@ -201,7 +201,7 @@ Background / examples</li>
   <span class="n">noFill</span><span class="o">();</span>  <span class="c1">// turn off the fill of the shapes</span></code></pre></div>
 
     <p>Notice that you can now see through the square within the program. You just
-  turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.</p>
+turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.</p>
 
   </div>
 </div>

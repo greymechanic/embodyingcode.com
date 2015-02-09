@@ -10,8 +10,8 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Feb 2015 08:16:09 -0600</pubDate>
-    <lastBuildDate>Mon, 09 Feb 2015 08:16:09 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Feb 2015 08:51:22 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Feb 2015 08:51:22 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -357,12 +357,12 @@ Background / examples&lt;/li&gt;
   &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;Processing Basics&lt;/a&gt;
   &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
 
-    &lt;p&gt;#####Comments &amp;amp; Basic Statements&lt;/p&gt;
+    &lt;h5 id=&quot;comments--basic-statements&quot;&gt;Comments &amp;amp; Basic Statements&lt;/h5&gt;
 
     &lt;p&gt;Enter the following program header at the top of your program. Replace the
-  placeholders, text with the &lt;context&gt;, with your own details or information requested.
-  In every program you write in this class you will start with a program header.
-  Don&#39;t forget to add these and then fill out the purpose section at the end of the exercise.&lt;/context&gt;&lt;/p&gt;
+placeholders, text with the &lt;context&gt;, with your own details or information requested.
+In every program you write in this class you will start with a program header.
+Don&#39;t forget to add these and then fill out the purpose section at the end of the exercise.&lt;/context&gt;&lt;/p&gt;
 
     &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;  Sketch 1&lt;/span&gt;
@@ -372,14 +372,14 @@ Background / examples&lt;/li&gt;
 &lt;span class=&quot;cm&quot;&gt;  */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;The syntax &lt;code&gt;/*   */&lt;/code&gt; denotes a block (multi-line) comment. A comment is a
-  portion of the code that is ignored when being compiled. Comments are used for
-  leaving notes or documentation within the code. The following syntax is an
-  example of a single line comment.&lt;/p&gt;
+portion of the code that is ignored when being compiled. Comments are used for
+leaving notes or documentation within the code. The following syntax is an
+example of a single line comment.&lt;/p&gt;
 
     &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// This is a single line comment&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;Now under your program header enter the following code, comment and all. You
-  will learn more about these commands during the lecture and when reading the text.&lt;/p&gt;
+will learn more about these commands during the lecture and when reading the text.&lt;/p&gt;
 
     &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// This sets the size of the window&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// This sets the color of the background&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -387,18 +387,18 @@ Background / examples&lt;/li&gt;
     &lt;p&gt;Now click on &lt;strong&gt;Run&lt;/strong&gt; and check out the larger window.&lt;/p&gt;
 
     &lt;p&gt;Notice that the words &lt;em&gt;size&lt;/em&gt; and &lt;em&gt;background&lt;/em&gt; are blue in color within the PDE.
-  This is called syntax highlighting. The editor knows that these are key words or
-  valid instructions within the Processing language and colors them accordingly.&lt;/p&gt;
+This is called syntax highlighting. The editor knows that these are key words or
+valid instructions within the Processing language and colors them accordingly.&lt;/p&gt;
 
-    &lt;p&gt;##### Primitive Shapes
-  Under the background command enter the following to draw your first primitive shape.&lt;/p&gt;
+    &lt;h5 id=&quot;primitive-shapes&quot;&gt;Primitive Shapes&lt;/h5&gt;
+    &lt;p&gt;Under the background command enter the following to draw your first primitive shape.&lt;/p&gt;
 
     &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ellipse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Draw a circle&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;The ellipse command draws an ellipse. The command takes four (4) parameters.
-  View the following reference to understand how to use the command. Pay attention to
-  the order of the parameters and what they are responsible for.See the &lt;a href=&quot;http://processing.org/reference/ellipse_.html&quot;&gt;Ellipse Docs&lt;/a&gt;
-  for more info.&lt;/p&gt;
+View the following reference to understand how to use the command. Pay attention to
+the order of the parameters and what they are responsible for.See the &lt;a href=&quot;http://processing.org/reference/ellipse_.html&quot;&gt;Ellipse Docs&lt;/a&gt;
+for more info.&lt;/p&gt;
 
     &lt;p&gt;Now try the following commands.&lt;/p&gt;
 
@@ -407,23 +407,23 @@ Background / examples&lt;/li&gt;
   &lt;span class=&quot;n&quot;&gt;rect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Draw a square&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;Pay attention to the order and how the shapes are drawn on the screen. Your
-  program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
-  of the program. How the shapes are drawn on the screen reflect this. Each shape
-  also has a point of origin and processing also has a particular way it lays out the screen.&lt;/p&gt;
+program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5… till the end
+of the program. How the shapes are drawn on the screen reflect this. Each shape
+also has a point of origin and processing also has a particular way it lays out the screen.&lt;/p&gt;
 
     &lt;p&gt;Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
-  bottom-right is &lt;em&gt;width&lt;/em&gt;, &lt;em&gt;height&lt;/em&gt;.  The Y axis is vertical and X axis is the horizontal.
-  Negative values are off screen and positive values move down and across respectively.
-  The following is an excerpt from the text &lt;em&gt;Learning Processing&lt;/em&gt;, by Daniel Shiffman.
-  This quick read does a great job of explaining more about the coordinate system and
-  how objects are drawn to the screen.&lt;/p&gt;
+bottom-right is &lt;em&gt;width&lt;/em&gt;, &lt;em&gt;height&lt;/em&gt;.  The Y axis is vertical and X axis is the horizontal.
+Negative values are off screen and positive values move down and across respectively.
+The following is an excerpt from the text &lt;em&gt;Learning Processing&lt;/em&gt;, by Daniel Shiffman.
+This quick read does a great job of explaining more about the coordinate system and
+how objects are drawn to the screen.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://processing.org/tutorials/drawing/&quot;&gt;Drawing Tutorial&lt;/a&gt;&lt;/p&gt;
 
     &lt;p&gt;Highlight the word line within the PDE. Now with the word highlighted go up to
-  the &lt;em&gt;Help » Find in Reference&lt;/em&gt; menu item. This will bring up a local copy of the
-  Processing language reference. This is to make sure that you always have the help
-  you need. Take a moment to read about the line and rect commands.&lt;/p&gt;
+the &lt;em&gt;Help » Find in Reference&lt;/em&gt; menu item. This will bring up a local copy of the
+Processing language reference. This is to make sure that you always have the help
+you need. Take a moment to read about the line and rect commands.&lt;/p&gt;
 
     &lt;p&gt;Now backup and enter the following between the background and ellipse command.&lt;/p&gt;
 
@@ -431,7 +431,7 @@ Background / examples&lt;/li&gt;
   &lt;span class=&quot;n&quot;&gt;noFill&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// turn off the fill of the shapes&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;Notice that you can now see through the square within the program. You just
-  turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.&lt;/p&gt;
+turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;

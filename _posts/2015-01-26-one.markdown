@@ -27,12 +27,12 @@ categories: >
   <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden demo">Processing Basics</a>
   <div id="js-expander-content" class="expander-content" markdown="1">
 
-  #####Comments & Basic Statements
+#####Comments & Basic Statements
 
-  Enter the following program header at the top of your program. Replace the
-  placeholders, text with the <context>, with your own details or information requested.
-  In every program you write in this class you will start with a program header.
-  Don't forget to add these and then fill out the purpose section at the end of the exercise.
+Enter the following program header at the top of your program. Replace the
+placeholders, text with the <context>, with your own details or information requested.
+In every program you write in this class you will start with a program header.
+Don't forget to add these and then fill out the purpose section at the end of the exercise.
 
   {% highlight java %}
   /*
@@ -43,42 +43,42 @@ categories: >
   */
   {% endhighlight %}
 
-  The syntax `/*   */` denotes a block (multi-line) comment. A comment is a
-  portion of the code that is ignored when being compiled. Comments are used for
-  leaving notes or documentation within the code. The following syntax is an
-  example of a single line comment.
+The syntax `/*   */` denotes a block (multi-line) comment. A comment is a
+portion of the code that is ignored when being compiled. Comments are used for
+leaving notes or documentation within the code. The following syntax is an
+example of a single line comment.
 
   {% highlight java %}
   // This is a single line comment
   {% endhighlight %}
 
-  Now under your program header enter the following code, comment and all. You
-  will learn more about these commands during the lecture and when reading the text.
+Now under your program header enter the following code, comment and all. You
+will learn more about these commands during the lecture and when reading the text.
 
   {% highlight java %}
   size(800, 800); // This sets the size of the window
   background(255);  // This sets the color of the background
   {% endhighlight %}
 
-  Now click on **Run** and check out the larger window.
+Now click on **Run** and check out the larger window.
 
-  Notice that the words *size* and *background* are blue in color within the PDE.
-  This is called syntax highlighting. The editor knows that these are key words or
-  valid instructions within the Processing language and colors them accordingly.
+Notice that the words *size* and *background* are blue in color within the PDE.
+This is called syntax highlighting. The editor knows that these are key words or
+valid instructions within the Processing language and colors them accordingly.
 
-  ##### Primitive Shapes
-  Under the background command enter the following to draw your first primitive shape.
+##### Primitive Shapes
+Under the background command enter the following to draw your first primitive shape.
 
   {% highlight java %}
   ellipse(100, 100, 150, 150);  // Draw a circle
   {% endhighlight %}
 
-  The ellipse command draws an ellipse. The command takes four (4) parameters.
-  View the following reference to understand how to use the command. Pay attention to
-  the order of the parameters and what they are responsible for.See the [Ellipse Docs](http://processing.org/reference/ellipse_.html)
-  for more info.
+The ellipse command draws an ellipse. The command takes four (4) parameters.
+View the following reference to understand how to use the command. Pay attention to
+the order of the parameters and what they are responsible for.See the [Ellipse Docs](http://processing.org/reference/ellipse_.html)
+for more info.
 
-  Now try the following commands.
+Now try the following commands.
 
   {% highlight java %}
   line(0, 0, 800, 800); // Draw a line
@@ -86,34 +86,34 @@ categories: >
   rect(300, 300, 200, 200); // Draw a square
   {% endhighlight %}
 
-  Pay attention to the order and how the shapes are drawn on the screen. Your
-  program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5... till the end
-  of the program. How the shapes are drawn on the screen reflect this. Each shape
-  also has a point of origin and processing also has a particular way it lays out the screen.
+Pay attention to the order and how the shapes are drawn on the screen. Your
+program is executed in a linear fashion, i.e, line 1, 2, 3, 4, 5... till the end
+of the program. How the shapes are drawn on the screen reflect this. Each shape
+also has a point of origin and processing also has a particular way it lays out the screen.
 
-  Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
-  bottom-right is *width*, *height*.  The Y axis is vertical and X axis is the horizontal.
-  Negative values are off screen and positive values move down and across respectively.
-  The following is an excerpt from the text *Learning Processing*, by Daniel Shiffman.
-  This quick read does a great job of explaining more about the coordinate system and
-  how objects are drawn to the screen.
+Processing uses the Cartesian coordinate system.  The top-left is 0, 0 and the
+bottom-right is *width*, *height*.  The Y axis is vertical and X axis is the horizontal.
+Negative values are off screen and positive values move down and across respectively.
+The following is an excerpt from the text *Learning Processing*, by Daniel Shiffman.
+This quick read does a great job of explaining more about the coordinate system and
+how objects are drawn to the screen.
 
-  [Drawing Tutorial](http://processing.org/tutorials/drawing/)
+[Drawing Tutorial](http://processing.org/tutorials/drawing/)
 
-  Highlight the word line within the PDE. Now with the word highlighted go up to
-  the *Help >> Find in Reference* menu item. This will bring up a local copy of the
-  Processing language reference. This is to make sure that you always have the help
-  you need. Take a moment to read about the line and rect commands.
+Highlight the word line within the PDE. Now with the word highlighted go up to
+the *Help >> Find in Reference* menu item. This will bring up a local copy of the
+Processing language reference. This is to make sure that you always have the help
+you need. Take a moment to read about the line and rect commands.
 
-  Now backup and enter the following between the background and ellipse command.
+Now backup and enter the following between the background and ellipse command.
 
   {% highlight java %}
   smooth();  // turn on anti-aliasing or make my shapes look good
   noFill();  // turn off the fill of the shapes
   {% endhighlight %}
 
-  Notice that you can now see through the square within the program. You just
-  turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.
+Notice that you can now see through the square within the program. You just
+turned the shapes fill off. You also turned antialiasing on which smooths out your shapes.
 
 
   </div>
