@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Four"
+subtitle: "Embodied"
+date:   2015-02-16 07:00:00
+published: false
+categories: >
+  week
+  class
+---
+
+> Embodiment.....
+
+*here's what we'll cover:*
+
+-
+-
+-
+
+*for next week:*
+
+- Make *something* that you think embodies code without writing a line of code
+    - Feel free to use laser cutters, 3D printers, or even scissors and cardboard
+    - maybe this is a LeWitt style wall drawing
+    - it can literally be  a n y t h i n g
+- watch this video

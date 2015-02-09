@@ -10,8 +10,8 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Feb 2015 08:51:22 -0600</pubDate>
-    <lastBuildDate>Mon, 09 Feb 2015 08:51:22 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Feb 2015 11:10:32 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Feb 2015 11:10:32 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -296,6 +296,88 @@ void keyPressed() {
         vertexX[j] = random(width);
         vertexY[j] = random(height);
     }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger4&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;One Hour Code Poem&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+
+    &lt;pre&gt;&lt;code&gt;/*
+ *
+ * 1 hour code poem.
+ * I just wrote this.
+ * 02/09/2015
+ *
+ */
+
+// declare variables
+int w, h;
+float alpha;
+float deviation;
+float weight;
+float chance;
+
+void setup() {
+  w = 600;
+  h = 600;
+
+  size(w, h);
+  background(255,255,255);
+
+}
+
+void draw() {
+
+
+  // add an alpha channel mapped to mouseX
+  alpha = constrain(mouseX, 0, w/12);
+
+  // add a deviation using the mouseY value to change it
+  deviation = constrain(mouseY, 0, h/2);
+
+
+  for( int i = 0; i &amp;lt; w; i++ ){
+
+    // create a random deviation for each line being drawn
+    float rDeviation = random(deviation);
+
+    // set a random value for line color
+    float randC = random(255);
+
+    // declare the stroke color with the transparency value
+    stroke(randC, alpha);
+
+    // see key pressed functions for changes in weight
+    strokeWeight(weight);
+
+
+    /*
+      draw verical &amp;amp; horizontal lines
+      with the random deviation subtracted
+      from each end
+    */
+    line( i, rDeviation, i, h-rDeviation);
+
+    line( rDeviation, i, w-rDeviation, i);
+  }
+
+}
+
+
+void keyPressed() {
+  if (key == &#39;w&#39;) {
+    weight = random(4);
+  }
+
+  if (key == &#39;c&#39;) {
+    //  reset weight and redraw the background
+    weight = 1;
+    background(255,255,255);
   }
 }
 &lt;/code&gt;&lt;/pre&gt;

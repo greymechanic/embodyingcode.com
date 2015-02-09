@@ -354,6 +354,88 @@ void keyPressed() {
   </div>
 </div>
 
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger4" class="expander-trigger expander-hidden demo">One Hour Code Poem</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>/*
+ *
+ * 1 hour code poem.
+ * I just wrote this.
+ * 02/09/2015
+ *
+ */
+
+// declare variables
+int w, h;
+float alpha;
+float deviation;
+float weight;
+float chance;
+
+void setup() {
+  w = 600;
+  h = 600;
+
+  size(w, h);
+  background(255,255,255);
+
+}
+
+void draw() {
+
+
+  // add an alpha channel mapped to mouseX
+  alpha = constrain(mouseX, 0, w/12);
+
+  // add a deviation using the mouseY value to change it
+  deviation = constrain(mouseY, 0, h/2);
+
+
+  for( int i = 0; i &lt; w; i++ ){
+
+    // create a random deviation for each line being drawn
+    float rDeviation = random(deviation);
+
+    // set a random value for line color
+    float randC = random(255);
+
+    // declare the stroke color with the transparency value
+    stroke(randC, alpha);
+
+    // see key pressed functions for changes in weight
+    strokeWeight(weight);
+
+
+    /*
+      draw verical &amp; horizontal lines
+      with the random deviation subtracted
+      from each end
+    */
+    line( i, rDeviation, i, h-rDeviation);
+
+    line( rDeviation, i, w-rDeviation, i);
+  }
+
+}
+
+
+void keyPressed() {
+  if (key == 'w') {
+    weight = random(4);
+  }
+
+  if (key == 'c') {
+    //  reset weight and redraw the background
+    weight = 1;
+    background(255,255,255);
+  }
+}
+</code></pre>
+
+  </div>
+</div>
+
   </article>
 
 </div>
