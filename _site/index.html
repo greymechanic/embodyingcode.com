@@ -595,81 +595,6 @@ filter(POSTERIZE, 6);
 </div>
 
 <div class="expander">
-  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Putting it All Together</a>
-  <div id="js-expander-content" class="expander-content">
-
-    <pre><code>int w, h;
-int offset;
-
-boolean oneShot;
-
-int numPoints;
-
-// establish arrays to store values
-float r[] = new float[50];
-float g[] = new float[50];
-float b[] = new float[50];
-
-float vertexX[] = new float[50];
-float vertexY[] = new float[50];
-
-void setup() {
-
-  oneShot = false;
-  offset = 50;
-  numPoints = 50;
-
-  size(1000,1000);
-  width = 1000;
-  height = 1000;
-
-  // fill the arrays with random values (use width and height as constraints for location)
-  // pick random colors for each R, G, &amp; B value
-  for(int j = 0; j &lt; numPoints; j ++){
-      r[j] = random(255);
-      g[j] = random(255);
-      b[j] = random(255);
-      vertexX[j] = random(width);
-      vertexY[j] = random(height);
-  }
-
-}
-
-void draw() {  
-  background(120,120,120);
-  stroke(0, 120);
-
-  // first draw circled at all 50 locations
-  for(int j = 0; j &lt; numPoints; j ++){
-    ellipse(vertexX[j], vertexY[j], 8, 8);
-  }
-
-  // use a nested for loop to draw lines between all points
-  for(int x = 0; x &lt; numPoints; x ++){
-      for(int y = 0; y &lt; numPoints; y ++){
-          stroke(r[y], g[y], b[y],127);
-          line(vertexX[x], vertexY[x], vertexX[y], vertexY[y]);
-      }
-  }
-}
-
-void keyPressed() {
-  if (key == 'R' || key == 'r') {
-    for(int j = 0; j &lt; numPoints; j ++){
-        r[j] = random(255);
-        g[j] = random(255);
-        b[j] = random(255);
-        vertexX[j] = random(width);
-        vertexY[j] = random(height);
-    }
-  }
-}
-</code></pre>
-
-  </div>
-</div>
-
-<div class="expander">
   <a href="javascript:void(0)" id="js-expander-trigger4" class="expander-trigger expander-hidden demo">One Hour Code Poem</a>
   <div id="js-expander-content" class="expander-content">
 
@@ -997,6 +922,81 @@ void keyReleased() {
   </li>
   <li>watch this video</li>
 </ul>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Putting it All Together</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>int w, h;
+int offset;
+
+boolean oneShot;
+
+int numPoints;
+
+// establish arrays to store values
+float r[] = new float[50];
+float g[] = new float[50];
+float b[] = new float[50];
+
+float vertexX[] = new float[50];
+float vertexY[] = new float[50];
+
+void setup() {
+
+  oneShot = false;
+  offset = 50;
+  numPoints = 50;
+
+  size(1000,1000);
+  width = 1000;
+  height = 1000;
+
+  // fill the arrays with random values (use width and height as constraints for location)
+  // pick random colors for each R, G, &amp; B value
+  for(int j = 0; j &lt; numPoints; j ++){
+      r[j] = random(255);
+      g[j] = random(255);
+      b[j] = random(255);
+      vertexX[j] = random(width);
+      vertexY[j] = random(height);
+  }
+
+}
+
+void draw() {  
+  background(120,120,120);
+  stroke(0, 120);
+
+  // first draw circled at all 50 locations
+  for(int j = 0; j &lt; numPoints; j ++){
+    ellipse(vertexX[j], vertexY[j], 8, 8);
+  }
+
+  // use a nested for loop to draw lines between all points
+  for(int x = 0; x &lt; numPoints; x ++){
+      for(int y = 0; y &lt; numPoints; y ++){
+          stroke(r[y], g[y], b[y],127);
+          line(vertexX[x], vertexY[x], vertexX[y], vertexY[y]);
+      }
+  }
+}
+
+void keyPressed() {
+  if (key == 'R' || key == 'r') {
+    for(int j = 0; j &lt; numPoints; j ++){
+        r[j] = random(255);
+        g[j] = random(255);
+        b[j] = random(255);
+        vertexX[j] = random(width);
+        vertexY[j] = random(height);
+    }
+  }
+}
+</code></pre>
+
+  </div>
+</div>
 
       </article>
     </li>
