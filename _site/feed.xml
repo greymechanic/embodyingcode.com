@@ -10,9 +10,44 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Feb 2015 11:10:32 -0600</pubDate>
-    <lastBuildDate>Mon, 09 Feb 2015 11:10:32 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Feb 2015 15:57:24 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Feb 2015 15:57:24 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Four</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Embodiment…..&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;here’s what we’ll cover:&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;-&lt;/h2&gt;
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;for next week:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make &lt;em&gt;something&lt;/em&gt; that you think embodies code without writing a line of code
+    &lt;ul&gt;
+      &lt;li&gt;Feel free to use laser cutters, 3D printers, or even scissors and cardboard&lt;/li&gt;
+      &lt;li&gt;maybe this is a LeWitt style wall drawing&lt;/li&gt;
+      &lt;li&gt;it can literally be  a n y t h i n g&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;watch this video&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 16 Feb 2015 01:00:00 -0600</pubDate>
+        <link>http://embodyingcode.com/week/class/2015/02/16/four.html</link>
+        <guid isPermaLink="true">http://embodyingcode.com/week/class/2015/02/16/four.html</guid>
+        
+        
+        <category>week</category>
+        
+        <category>class</category>
+        
+      </item>
     
       <item>
         <title>Three</title>
@@ -379,6 +414,216 @@ void keyPressed() {
     weight = 1;
     background(255,255,255);
   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger5&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;Processing Demo 1 - Conditionals&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+
+    &lt;pre&gt;&lt;code&gt;/*
+*
+* Day 2 Processing Workshop
+* Andrew Kaye
+* 02/09/2015
+*
+*/
+
+// declare variables
+int w, h;
+int kittens;
+
+void setup() {
+w = 400;
+h = 400;
+
+kittens = 50;
+
+size(w, h);
+background(255,255,255);
+
+}
+
+void draw() {
+background(255,255,255);
+fill(255);
+
+rect(10,10,20,20);
+
+if( keyPressed == true ){
+    if ( key == &#39;a&#39;){
+       //code will run when a key is pressed
+       fill(255,0,0);
+    }
+    ellipse(kittens*2,kittens*2, 50,50);
+}
+
+if( keyPressed == true &amp;amp;&amp;amp; key == &#39; &#39;) {
+    background(0);
+}
+
+if ( mouseX &amp;gt; 100  ) {
+  stroke(255,127,0,120);
+} else {
+  stroke(0);
+}
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger6&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;Processing Demo 2 - Bouncing Ball&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+    &lt;pre&gt;&lt;code&gt;/*
+*
+* Day 2B Processing Workshop
+* bouncing ball
+* Andrew Kaye
+* 02/09/2015
+*
+*/
+
+// declare variables
+int w, h;
+int xVal;
+int speed;
+
+void setup() {
+w = 400;
+h = 400;
+
+xVal = 0;
+speed = 1;
+
+size(w, h);
+background(255, 255, 255);
+}
+
+void draw() {
+
+background(255, 255, 255);
+ellipse( xVal, h/2, 100, 100);
+
+xVal += speed;
+
+if (xVal == w) {
+  speed *= -1;
+} else if (xVal == 0) {
+  speed *= -1;
+}
+
+println(xVal);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger7&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;Processing Demo 3 - Bouncing Ball w/ Loops&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+
+    &lt;pre&gt;&lt;code&gt;/*
+ *
+ * Day 2C Processing Workshop
+ * bouncing ball with loops n&#39; stuff
+ * Andrew Kaye
+ * 02/09/2015
+ *
+ */
+
+// declare variables
+int w, h;
+int xVal;
+int speed;
+int line;
+
+boolean keyDown = false;
+
+void setup() {
+  w = 400;
+  h = 400;
+
+  xVal = 0;
+  speed = 1;
+
+  size(w, h);
+  background(255, 255, 255);
+  //  frameRate(4);
+}
+
+void draw() {
+
+  // only draw lines if this boolean is true
+  if(keyDown == true){
+    // while loop
+    line = 0;
+    while ( line &amp;lt; h/2 ) {
+      float r = random(255);
+      float g = random(255);
+      float b = random(255);
+      stroke(r, g, b);
+      line(100, 100 + line, 200, 0 + line);
+      line++;
+      println(&quot;adding a line&quot;);
+    }
+  }
+
+  // draw a ball moving across the screen
+  stroke(0);
+  ellipse( xVal, h/2, 100, 100);
+
+  xVal += speed;
+
+  if (xVal == w) {
+    speed *= -1;
+  } else if (xVal == 0) {
+    speed *= -1;
+  }
+
+  // for loop
+  for ( int unicorns = 0; unicorns &amp;lt; w; unicorns+=10 ) {
+    float r = random(255);
+    float g = random(255);
+    float b = random(255);
+    stroke(r, g, b);
+    line(unicorns, 50, unicorns, 150);
+    println(&quot;adding a unicorn&quot;);
+  }
+
+  println(&quot;draw loop is ending&quot;);
+
+}
+
+void keyPressed() {
+
+  if (key == &#39; &#39;) {
+    background(255, 255, 255);
+    println(&quot;this is some text that means nothing&quot;);
+  }
+  if (key == &#39;a&#39;) {
+    background(0, 255, 120);
+    println(&quot;this is some text that means nothing&quot;);
+  }
+  if (key == &#39;b&#39;){
+    keyDown = true;
+  }
+
+}
+
+void keyReleased() {
+
+  if (key == &#39;b&#39;) {
+    keyDown = false;
+    background(255);
+  }
+
 }
 &lt;/code&gt;&lt;/pre&gt;
 

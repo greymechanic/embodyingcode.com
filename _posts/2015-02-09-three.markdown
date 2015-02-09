@@ -368,3 +368,212 @@ length - returns the length of the array
 
 </div>
 </div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger5" class="expander-trigger expander-hidden demo">Processing Demo 1 - Conditionals</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+    /*
+    *
+    * Day 2 Processing Workshop
+    * Andrew Kaye
+    * 02/09/2015
+    *
+    */
+
+    // declare variables
+    int w, h;
+    int kittens;
+
+    void setup() {
+    w = 400;
+    h = 400;
+
+    kittens = 50;
+
+    size(w, h);
+    background(255,255,255);
+
+    }
+
+    void draw() {
+    background(255,255,255);
+    fill(255);
+
+    rect(10,10,20,20);
+
+    if( keyPressed == true ){
+        if ( key == 'a'){
+           //code will run when a key is pressed
+           fill(255,0,0);
+        }
+        ellipse(kittens*2,kittens*2, 50,50);
+    }
+
+    if( keyPressed == true && key == ' ') {
+        background(0);
+    }
+
+    if ( mouseX > 100  ) {
+      stroke(255,127,0,120);
+    } else {
+      stroke(0);
+    }
+
+    }
+
+</div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger6" class="expander-trigger expander-hidden demo">Processing Demo 2 - Bouncing Ball</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+    /*
+    *
+    * Day 2B Processing Workshop
+    * bouncing ball
+    * Andrew Kaye
+    * 02/09/2015
+    *
+    */
+
+    // declare variables
+    int w, h;
+    int xVal;
+    int speed;
+
+    void setup() {
+    w = 400;
+    h = 400;
+
+    xVal = 0;
+    speed = 1;
+
+    size(w, h);
+    background(255, 255, 255);
+    }
+
+    void draw() {
+
+    background(255, 255, 255);
+    ellipse( xVal, h/2, 100, 100);
+
+    xVal += speed;
+
+    if (xVal == w) {
+      speed *= -1;
+    } else if (xVal == 0) {
+      speed *= -1;
+    }
+
+    println(xVal);
+    }
+
+</div>
+</div>
+
+
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger7" class="expander-trigger expander-hidden demo">Processing Demo 3 - Bouncing Ball w/ Loops</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+    /*
+     *
+     * Day 2C Processing Workshop
+     * bouncing ball with loops n' stuff
+     * Andrew Kaye
+     * 02/09/2015
+     *
+     */
+
+    // declare variables
+    int w, h;
+    int xVal;
+    int speed;
+    int line;
+
+    boolean keyDown = false;
+
+    void setup() {
+      w = 400;
+      h = 400;
+
+      xVal = 0;
+      speed = 1;
+
+      size(w, h);
+      background(255, 255, 255);
+      //  frameRate(4);
+    }
+
+    void draw() {
+
+      // only draw lines if this boolean is true
+      if(keyDown == true){
+        // while loop
+        line = 0;
+        while ( line < h/2 ) {
+          float r = random(255);
+          float g = random(255);
+          float b = random(255);
+          stroke(r, g, b);
+          line(100, 100 + line, 200, 0 + line);
+          line++;
+          println("adding a line");
+        }
+      }
+
+      // draw a ball moving across the screen
+      stroke(0);
+      ellipse( xVal, h/2, 100, 100);
+
+      xVal += speed;
+
+      if (xVal == w) {
+        speed *= -1;
+      } else if (xVal == 0) {
+        speed *= -1;
+      }
+
+      // for loop
+      for ( int unicorns = 0; unicorns < w; unicorns+=10 ) {
+        float r = random(255);
+        float g = random(255);
+        float b = random(255);
+        stroke(r, g, b);
+        line(unicorns, 50, unicorns, 150);
+        println("adding a unicorn");
+      }
+
+      println("draw loop is ending");
+
+    }
+
+    void keyPressed() {
+
+      if (key == ' ') {
+        background(255, 255, 255);
+        println("this is some text that means nothing");
+      }
+      if (key == 'a') {
+        background(0, 255, 120);
+        println("this is some text that means nothing");
+      }
+      if (key == 'b'){
+        keyDown = true;
+      }
+
+    }
+
+    void keyReleased() {
+
+      if (key == 'b') {
+        keyDown = false;
+        background(255);
+      }
+
+    }
+
+</div>
+</div>

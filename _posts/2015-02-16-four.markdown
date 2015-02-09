@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Four"
-subtitle: "Embodied"
+subtitle: "Embodiment"
 date:   2015-02-16 07:00:00
-published: false
+published: true
 categories: >
   week
   class
