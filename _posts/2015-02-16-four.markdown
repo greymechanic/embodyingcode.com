@@ -9,13 +9,11 @@ categories: >
   class
 ---
 
-> Embodiment.....
+> Embodied Interaction is the creation, manipulation, and sharing of meaning through engaged interaction with artifacts.
 
 *here's what we'll cover:*
 
--
--
--
+- OOP (Object Orient Programming) with Processing
 
 *for next week:*
 
@@ -23,7 +21,76 @@ categories: >
     - Feel free to use laser cutters, 3D printers, or even scissors and cardboard
     - maybe this is a LeWitt style wall drawing
     - it can literally be  a n y t h i n g
-- watch this video
+- Read Chapter 4 - ["Being in the World": Embodied Interaction]({{ "/assets/pdfs/dourish-paul--where-the-action-is.pdf" | prepend: site.baseurl }}) from Paul Dourish's book, *Where the Action Is*
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger0" class="expander-trigger expander-hidden demo">OOP</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+We've talked about functions since day 1. Functions are used to do virtually everything in Processing, from drawing a line to drawing a complex shape. By writing our own custom functions we're able to simplify the code through abstracting complex lines of code into simple statements. This abstraction allows for cleaner, readable code and allows for simpler modularity.
+
+Functions can greatly reduce the number of lines of code you need to write. Also, a solid understanding of functions will pave the way to writing efficient object oriented programs.
+
+Example:
+
+`File -> Examples -> Basics -> Structure -> Functions`
+
+> An object combines related data (fields) with related actions and behaviors (methods). The idea is to group together related data with related methods that act on that data.
+
+#####Highlights
+1. One reason to make a class is to group together related data elements.
+2. An object is an instance of a class.
+3. The methods you create are used to change the values of the fields and perform actions based on the fields values.
+4. First create the class block, then add the fields
+
+Class block with fields:
+
+      class SomeThing {
+        // add variables to the class
+        int x;
+        int y;
+        int size;
+        float speed;
+      }
+
+**Next** add the constructor. The constructor assigns the initial values to the fields when an object is created.
+
+      // constructor
+      SomeThing(int tempX, int tempY, int tempSize, int tempSpeed) {
+        x = tempX;
+        y = tempY;
+        size = tempSize;
+        speed = tempSpeed;
+      }
+
+**Finally**, add the methods
+
+      // methods
+      void moveTheThing() {
+        x += speed;
+      }
+
+      void drawTheThing() {
+        ellipse(x, y, diameter, diameter);
+      }
+
+To use it, first make the object (this is like declaring a variable)
+
+      SomeThing newThing1;
+
+Second, Initialize the object with `new`. Also, pass in the parameters. (This goes in `void setup()`)
+
+      newThing1 = new SomeThing( 0, height/2, 50, 1);
+
+
+We put our methods in `draw()` using our new object, `newThing1`, to link our object to the methods.
+
+
+      newThing1.moveTheThing();
+      newThing1.drawTheThing();
+
+</div>
+</div>
 
 
 

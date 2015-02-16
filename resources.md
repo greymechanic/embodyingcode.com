@@ -12,6 +12,8 @@ Important stuff below!
 
 [Code as Medium]({{ "/assets/pdfs/villareal_code_as_medium.pdf" | prepend: site.baseurl }})
 
+[Where the Action Is]({{ "/assets/pdfs/dourish-paul--where-the-action-is.pdf" | prepend: site.baseurl }})
+
 ###Artists
 <a href="http://www.daito.ws/" target="_blank" class="tooltip">Diato Manabe</a> |
 <a href="http://www.flong.com/" target="_blank" class="tooltip">Golan Levin</a> |
