@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Five"
+subtitle: "Processing"
+date:   2015-02-23 07:00:00
+published: true
+categories: >
+  week
+  class
+---
+
+> no quotes. go write some code.
+
+*here's what we'll cover:*
+
+- review embodiment exercises
+- discuss reading
+- Processing demo && switch to physical output
+
+*links*
+
+- [What is G-Code?](http://en.wikipedia.org/wiki/G-code)
+- [gCtrl Processing Library](https://github.com/damellis/gctrl)
+- [hemesh Processing Library](http://hemesh.wblut.com)
+- [CodeThread Processing Library](https://github.com/DiatomStudio/CodeThread/)
+- [ModelBuilderMk2 Processing Library](https://github.com/mariuswatz/modelbuilderMk2)
+- [OBJExport Processing Library](http://n-e-r-v-o-u-s.com/tools/obj/) / [(Github)](https://github.com/nervoussystem/OBJExport)
+- [We'll do stuff like this](http://blog.diatom.cc/codethread/generative-codethread-experiments)
+
+
+*for next week:*
+
+- Work on Processing sketches / think about programming for static output
