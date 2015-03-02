@@ -10,8 +10,8 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Mar 2015 08:16:33 -0600</pubDate>
-    <lastBuildDate>Mon, 02 Mar 2015 08:16:33 -0600</lastBuildDate>
+    <pubDate>Mon, 02 Mar 2015 15:02:07 -0600</pubDate>
+    <lastBuildDate>Mon, 02 Mar 2015 15:02:07 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -41,6 +41,186 @@
 &lt;ul&gt;
   &lt;li&gt;Work on Processing + G-code&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4 id=&quot;class-this-saturday-meet-in-416--10am&quot;&gt;Class this Saturday! Meet in 416 @ 10AM&lt;/h4&gt;
+
+&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger0&quot; class=&quot;expander-trigger expander-hidden demo&quot;&gt;gCtrl diamond drawing&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+
+    &lt;pre&gt;&lt;code&gt;import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import processing.serial.*;
+
+Serial port = null;
+
+// select and modify the appropriate line for your operating system
+// leave as null to use interactive port (press &#39;p&#39; in the program)
+//String portname = null;
+String portname = Serial.list()[5]; // Mac OS X
+//String portname = &quot;/dev/ttyUSB0&quot;; // Linux
+//String portname = &quot;COM6&quot;; // Windows
+
+boolean streaming = false;
+float speed = 0.001;
+String[] gcode;
+int i = 0;
+boolean processRunning = false;
+
+void openSerialPort()
+{
+  if (portname == null) return;
+  if (port != null) port.stop();
+
+  port = new Serial(this, portname, 9600);
+
+  port.bufferUntil(&#39;\n&#39;);
+}
+
+void selectSerialPort()
+{
+  String result = (String) JOptionPane.showInputDialog(this,
+    &quot;Select the serial port that corresponds to your Arduino board.&quot;,
+    &quot;Select serial port&quot;,
+    JOptionPane.PLAIN_MESSAGE,
+    null,
+    Serial.list(),
+    0);
+
+  if (result != null) {
+    portname = result;
+    openSerialPort();
+  }
+}
+
+void setup()
+{
+  size(500, 250);
+  openSerialPort();
+
+  // List all the available serial ports
+  println(Serial.list());
+}
+
+void draw()
+{
+  background(0);  
+  fill(255);
+  int y = 24, dy = 12;
+  text(&quot;INSTRUCTIONS&quot;, 12, y); y += dy;
+  text(&quot;p: select serial port&quot;, 12, y); y += dy;
+  text(&quot;1: set speed to 0.001 inches (1 mil) per jog&quot;, 12, y); y += dy;
+  text(&quot;2: set speed to 0.010 inches (10 mil) per jog&quot;, 12, y); y += dy;
+  text(&quot;3: set speed to 0.100 inches (100 mil) per jog&quot;, 12, y); y += dy;
+  text(&quot;arrow keys: jog in x-y plane&quot;, 12, y); y += dy;
+  text(&quot;u: jog z axis up &amp;amp; d: jog z axis down&quot;, 12, y); y += dy;
+  text(&quot;$: display grbl settings&quot;, 12, y); y+= dy;
+  text(&quot;h: go home&quot;, 12, y); y += dy;
+  text(&quot;0: zero machine (set home to the current location)&quot;, 12, y); y += dy;
+  text(&quot;g: stream a g-code file&quot;, 12, y); y += dy;
+  text(&quot;x: stop streaming g-code (this is NOT immediate)&quot;, 12, y); y += dy;
+  y = height - dy;
+  text(&quot;current jog speed: &quot; + speed + &quot; inches per step&quot;, 12, y); y -= dy;
+  text(&quot;current serial port: &quot; + portname, 12, y); y -= dy;
+}
+
+void keyReleased() {
+  if (!streaming) {
+    if(!processRunning){
+      if (key == &#39;k&#39;) {
+        processRunning = true;
+        for(int ii = 0; ii &amp;lt; 1200; ii++){
+          if (ii &amp;lt; 300) port.write(&quot;G91\nG20\nG00 X&quot;+ speed + &quot;Y&quot; + speed + &quot; Z0.000\n&quot;);
+          if (ii &amp;gt;= 300 &amp;amp;&amp;amp; ii &amp;lt; 600) port.write(&quot;G91\nG20\nG00 X&quot;+ speed + &quot;Y-&quot; + speed + &quot; Z0.000\n&quot;);
+          if (ii &amp;gt;= 600 &amp;amp;&amp;amp; ii &amp;lt; 900) port.write(&quot;G91\nG20\nG00 X-&quot;+ speed + &quot;Y-&quot; + speed + &quot; Z0.000\n&quot;);
+          if (ii &amp;gt;= 900 ) port.write(&quot;G91\nG20\nG00 X-&quot;+ speed + &quot;Y&quot; + speed + &quot; Z0.000\n&quot;);
+          if (ii == 1199) processRunning = false;
+        }
+
+      }
+    }
+  }
+}
+
+void keyPressed()
+{
+  if (key == &#39;1&#39;) speed = 0.001;
+  if (key == &#39;2&#39;) speed = 0.01;
+  if (key == &#39;3&#39;) speed = 0.1;
+
+  if (!streaming) {
+    if (keyCode == LEFT) port.write(&quot;G91\nG20\nG00 X-&quot; + speed + &quot; Y0.000 Z0.000\n&quot;);
+    if (keyCode == RIGHT) port.write(&quot;G91\nG20\nG00 X&quot; + speed + &quot; Y0.000 Z0.000\n&quot;);
+    if (key == &#39;q&#39;) port.write(&quot;G91\nG20\nG00 X&quot; + (speed*=int(random(-1,1))) + &quot; Y0.000 Z0.000\n&quot;);
+    if (keyCode == UP) port.write(&quot;G91\nG20\nG00 X0.000 Y&quot; + speed + &quot; Z0.000\n&quot;);
+    if (keyCode == DOWN) port.write(&quot;G91\nG20\nG00 X0.000 Y-&quot; + speed + &quot; Z0.000\n&quot;);
+    if (key == &#39;u&#39;) port.write(&quot;G91\nG20\nG00 X0.000 Y0.000 Z&quot; + speed + &quot;\n&quot;);
+    if (key == &#39;d&#39;) port.write(&quot;G91\nG20\nG00 X0.000 Y0.000 Z-&quot; + speed + &quot;\n&quot;);
+    if (key == &#39;h&#39;) port.write(&quot;G90\nG20\nG00 X0.000 Y0.000 Z0.000\n&quot;);
+    if (key == &#39;v&#39;) port.write(&quot;$0=75\n$1=74\n$2=75\n&quot;);
+    //if (key == &#39;v&#39;) port.write(&quot;$0=100\n$1=74\n$2=75\n&quot;);
+    if (key == &#39;s&#39;) port.write(&quot;$3=10\n&quot;);
+    if (key == &#39;e&#39;) port.write(&quot;$16=1\n&quot;);
+    if (key == &#39;d&#39;) port.write(&quot;$16=0\n&quot;);
+    if (key == &#39;0&#39;) openSerialPort();
+    if (key == &#39;p&#39;) selectSerialPort();
+    if (key == &#39;$&#39;) port.write(&quot;$$\n&quot;);
+  }
+
+  if (!streaming &amp;amp;&amp;amp; key == &#39;g&#39;) {
+    gcode = null; i = 0;
+    File file = null;
+    println(&quot;Loading file...&quot;);
+    selectInput(&quot;Select a file to process:&quot;, &quot;fileSelected&quot;, file);
+  }
+
+  if (key == &#39;x&#39;) streaming = false;
+}
+
+void fileSelected(File selection) {
+  if (selection == null) {
+    println(&quot;Window was closed or the user hit cancel.&quot;);
+  } else {
+    println(&quot;User selected &quot; + selection.getAbsolutePath());
+    gcode = loadStrings(selection.getAbsolutePath());
+    if (gcode == null) return;
+    streaming = true;
+    stream();
+  }
+}
+
+void stream()
+{
+  if (!streaming) return;
+
+  while (true) {
+    if (i == gcode.length) {
+      streaming = false;
+      return;
+    }
+
+    if (gcode[i].trim().length() == 0) i++;
+    else break;
+  }
+
+  println(gcode[i]);
+  port.write(gcode[i] + &#39;\n&#39;);
+  i++;
+}
+
+void serialEvent(Serial p)
+{
+  String s = p.readStringUntil(&#39;\n&#39;);
+  println(s.trim());
+
+  if (s.trim().startsWith(&quot;ok&quot;)) stream();
+  if (s.trim().startsWith(&quot;error&quot;)) stream(); // XXX: really?
+}
+
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 02 Mar 2015 01:00:00 -0600</pubDate>
         <link>http://embodyingcode.com/week/class/2015/03/02/six.html</link>
