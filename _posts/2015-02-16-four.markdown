@@ -93,6 +93,99 @@ We put our methods in `draw()` using our new object, `newThing1`, to link our ob
 </div>
 
 
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger1" class="expander-trigger expander-hidden demo">Morning OOP Demo</a>
+  <div id="js-expander-content" class="expander-content" markdown="1">
+
+
+    /*
+     *
+     * OOP Processing Workshop
+     * bouncing ball
+     * Andrew Kaye
+     * 02/16/2015
+     *
+     */
+
+    // declare variables
+    int w, h;
+
+    Ball myFirstBall;
+    Ball mySecondBall;
+
+    void setup() {
+      w = 400;
+      h = 400;
+
+      myFirstBall = new Ball(100, h/2, 2);
+      mySecondBall = new Ball(50, 300, 1);
+
+      size(w, h, P3D);
+      background(255, 255, 255);
+    }
+
+    void draw() {
+
+      background(255, 255, 255);
+
+      myFirstBall.addColor(random(255));
+      myFirstBall.drawNotABall(170);
+
+      mySecondBall.addColor(random(255));
+      mySecondBall.drawNotABall(45);
+
+      myFirstBall.moveMyBall();
+      mySecondBall.moveMyBall();
+    }
+
+    class Ball {
+      int xVal;
+      int speed;
+      int size;
+      int yVal;
+      float R;
+      float m;
+      int rotate;
+
+      Ball(int uniqueSize, int uniqueyVal, int uniqueSpeed) {
+        size = uniqueSize;
+        yVal = uniqueyVal;
+        xVal = 100;
+        speed = uniqueSpeed;
+      }
+
+      void moveMyBall() {
+        xVal += speed;
+
+        if (xVal == w) {
+          speed *= -1;
+        } else if (xVal == 0) {
+          speed *= -1;
+        }
+      }
+
+      void addColor(float um){
+        m = um;
+        fill(m, 0, 0);
+      }
+
+      void drawMyBall() {
+        ellipse( xVal, yVal, size, size);
+      }
+
+      void drawNotABall(int uRotate){
+        rotate = uRotate;
+        pushMatrix();
+        rotateY(rotate);
+        rect( xVal, yVal, size, size);
+        popMatrix();
+      }
+    }
+
+</div>
+</div>
+
+
 
 <div class="expander">
   <a href="javascript:void(0)" id="js-expander-trigger3" class="expander-trigger expander-hidden demo">Putting it All Together</a>
