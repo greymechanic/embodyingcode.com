@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Six"
+subtitle: "G-Code"
+date:   2015-03-02 07:00:00
+published: true
+categories: >
+  week
+  class
+---
+
+> Not talking about this [G Code](http://www.urbandictionary.com/define.php?term=G+Code). We live by the real [G-code](http://en.wikipedia.org/wiki/G-code). We rely on the screens, we do battle in Processing, I was born in the G-Code, embedded in my blood.
+
+*here's what we'll cover:*
+
+- Processing check-in
+- Head over to the IO Lab for a Gctrl demo
+- Spend the morning planning how to use Gctrl
+- Spend the afternoon in the lab testing Gctrl
+
+*links*
+
+- [Gctrl Processing Sketch](https://github.com/notandrewkaye/gctrl)
+- [Shapeoko HelloWorld](http://docs.shapeoko.com/helloworld.html)
+
+*for next week:*
+
+- Work on Processing + G-code

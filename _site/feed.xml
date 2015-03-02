@@ -10,9 +10,48 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Mar 2015 08:06:08 -0600</pubDate>
-    <lastBuildDate>Mon, 02 Mar 2015 08:06:08 -0600</lastBuildDate>
+    <pubDate>Mon, 02 Mar 2015 08:16:33 -0600</pubDate>
+    <lastBuildDate>Mon, 02 Mar 2015 08:16:33 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Six</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Not talking about this &lt;a href=&quot;http://www.urbandictionary.com/define.php?term=G+Code&quot;&gt;G Code&lt;/a&gt;. We live by the real &lt;a href=&quot;http://en.wikipedia.org/wiki/G-code&quot;&gt;G-code&lt;/a&gt;. We rely on the screens, we do battle in Processing, I was born in the G-Code, embedded in my blood.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;here’s what we’ll cover:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Processing check-in&lt;/li&gt;
+  &lt;li&gt;Head over to the IO Lab for a Gctrl demo&lt;/li&gt;
+  &lt;li&gt;Spend the morning planning how to use Gctrl&lt;/li&gt;
+  &lt;li&gt;Spend the afternoon in the lab testing Gctrl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;links&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/notandrewkaye/gctrl&quot;&gt;Gctrl Processing Sketch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.shapeoko.com/helloworld.html&quot;&gt;Shapeoko HelloWorld&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;for next week:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Work on Processing + G-code&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 02 Mar 2015 01:00:00 -0600</pubDate>
+        <link>http://embodyingcode.com/week/class/2015/03/02/six.html</link>
+        <guid isPermaLink="true">http://embodyingcode.com/week/class/2015/03/02/six.html</guid>
+        
+        
+        <category>week</category>
+        
+        <category>class</category>
+        
+      </item>
     
       <item>
         <title>Five</title>
