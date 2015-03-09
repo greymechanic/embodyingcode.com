@@ -1239,6 +1239,7 @@ void keyPressed() {
 
 <ul>
   <li>Work on Processing + G-code</li>
+  <li><a href="http://diatom.cc/code/processing/libraries/codethread/codethread_1.1.2.zip">codethread</a></li>
 </ul>
 
 <h4 id="class-this-saturday-meet-in-416--10am">Class this Saturday! Meet in 416 @ 10AM</h4>
@@ -1415,11 +1416,463 @@ void serialEvent(Serial p)
   if (s.trim().startsWith("ok")) stream();
   if (s.trim().startsWith("error")) stream(); // XXX: really?
 }
-
-&lt;/div&gt;
-&lt;/div&gt;
 </code></pre>
-  </div></div>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger1" class="expander-trigger expander-hidden demo">Shapeoko Path Simulator</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>// shapeoko random path simulator
+
+Simulator s;
+
+void setup() {
+  size(800,800);
+  // Create a simulator object
+  s = new Simulator();
+  background(255);
+}
+
+void draw() {
+  // Run the shapeoko simulator
+  s.step();
+  s.render();
+}
+
+
+
+class Simulator {
+  int x,y;
+
+  Simulator() {
+    x = width/2;
+    y = height/2;
+  }
+
+  void render() {
+    stroke(0);
+    point(x,y);
+  }
+
+  // Randomly move up, down, left, right, or stay in one place
+  void step() {
+
+    int choice = int(random(4));
+
+    if (choice == 0) {
+      x++;
+    } else if (choice == 1) {
+      x--;
+    } else if (choice == 2) {
+      y++;
+    } else {
+      y--;
+    }
+
+    x = constrain(x,0,width-1);
+    y = constrain(y,0,height-1);
+  }
+}
+</code></pre>
+
+  </div>
+</div>
+
+      </article>
+    </li>
+    
+    <li id="Seven">
+      
+      <h1 class="post-title">
+        <!-- <a class="post-link" href="/week/class/2015/03/09/seven.html"> -->
+        
+        Generate
+        
+        <!-- </a> -->
+        <span class="post-meta">Mar 9</span>
+      </h1>
+      
+      <article class="post-content">
+        <blockquote>
+  <p>you can’t be any geek off the street, gotta be handy with the PLA if you know what I mean, earn your keep. generators. mount up</p>
+</blockquote>
+
+<p><em>here’s what we’ll cover:</em></p>
+
+<ul>
+  <li><a href="http://diatom.cc/code/processing/libraries/codethread/codethread_1.1.2.zip">download the codethread library</a></li>
+  <li>IO Lab codeThread demo</li>
+  <li><a href="http://diatom.cc/code/processing/libraries/codethread/reference/">codethread reference docs</a></li>
+  <li>Spend the morning demoing codethread</li>
+  <li>Spend the afternoon in the lab testing codethread models</li>
+  <li>download <a href="http://replicat.org/download">replicatorG</a></li>
+  <li><a href="http://replicat.org/usage">replicatorG usage</a></li>
+  <li><a href="http://gcode.ws">gCode Viewer</a></li>
+  <li><a href="http://replicat.org/gcodes">gCode cheat codes</a></li>
+</ul>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger0" class="expander-trigger expander-hidden demo">codethread demo</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>/**
+* codeThread - simple cube example
+* by: Diatom Studio (diatom.cc)
+*
+* A simple example of using codeThread to generate tool paths or printing a simple cube and raft on makerbot
+*
+*
+*/
+
+import codeThreadLib.library.*;
+
+CodeThread codeThread;
+
+float xoff = 0.0;
+float xincrement = 0.02;
+float scale = 5;
+float move = 10;
+float y, x, rX, rZ, freq;
+float inc = 0.1;
+
+void setup() {
+  size(800,800,P3D);
+
+  y = height/2;
+  x = width/2;
+  rX = PI/4;
+  rZ = PI/4;
+  freq = 12;
+
+  makeACube();
+
+}
+
+
+void makeACube(){
+
+  // create a new instance
+  codeThread = new CodeThread(this);
+
+  // set the machine to it's default settings tool temp 220 degrees
+  // build platform temp 110 degrees units (mm)
+  // set machine to absolute positioning
+  // set current position to home, 0,0,0
+  // set tool speed to 255 wait for the tool to heat
+  codeThread.setDefaults();
+
+  //generate a cube
+  float sideLen = 30; // lenght of the cubes side
+  float headSpeed = 1556.0f; // speed that the extruder head will travel at whilst printing
+  float zPos = 0; // keep track of the z pos of the extruder head
+  float zStep = 0.35f; // the amount to move up each step on the z axis
+
+  //generate a raft
+  codeThread.generateRaft(sideLen +5, sideLen + 5, 560,1500, 2.5f,1.5f); // generate a raft generateRaft(raftWidth,raftLength, headSpeedBottomLayer,headSpeedTopLayer, distanceBetweenSlatsBottomLayer,DistanceBetweenSlatsTopLayer)
+
+  zPos = 1.27;// after drawing the raft our new zheight is 1.27(mm)
+
+  for (zPos = 1.27; zPos &lt; 20; zPos+=zStep) {
+
+    //move the extruder head to each point
+    codeThread.moveTo(-(sideLen/2), -(sideLen/2), zPos, headSpeed);
+
+    codeThread.extruderOnFwd(); // start extruding, now we're at the start point
+
+    codeThread.moveTo( 15, -15, zPos, headSpeed); //whilst extruding move extruder to 2nd corner
+    codeThread.moveTo( 15, 15, zPos, headSpeed);
+    codeThread.moveTo( -15, 15, zPos, headSpeed);
+    codeThread.moveTo( -15, -15, zPos, headSpeed); //back to the start,
+
+    //shape complete, step up in the z direction and start all over again
+    codeThread.extruderOff(); // stop extruding
+  }
+
+  codeThread.printToConsole(); // print to console
+  codeThread.writeToFile(sketchPath +"/code01.txt");
+
+}
+
+
+void draw() {
+
+  //make things pretty, rotate and zoom to see cube
+  smooth();
+  background(255);
+  pushMatrix();
+  translate(x, y);//center at 0,0
+  rotateX(rX);
+  rotateZ(rZ);
+  scale(scale);
+
+  //draw the platform
+  noStroke();
+  fill(220,220,220);
+  rect(-(80/2),-(80/2),(80),(80)); // draw the makerbot platform for reference
+  stroke(0, 0, 0, 80);
+
+
+  codeThread.render(); //render the tool paths
+
+  popMatrix();
+  fill(0);
+  stroke(0);
+
+  // draw instructions
+  int y = 24, dy = 12;
+  text("INSTRUCTIONS", 12, y); y += dy;
+  text("w: move up", 12, y); y += dy;
+  text("s: move down", 12, y); y += dy;
+  text("a: move left", 12, y); y += dy;
+  text("d: move right", 12, y); y += dy;
+  text("z: zoom in", 12, y); y += dy;
+  text("x: zoom out", 12, y); y += dy;
+  text("r: rotate Z (+)", 12, y); y+= dy;
+  text("f: rotate Z (-)", 12, y); y += dy;
+  text("m: rebuild cube", 12, y); y += dy;
+  text("q: increase frequency", 12, y); y += dy;
+  text("e: decrease frequency", 12, y); y += dy;
+  text("frequency: " + freq, 12, y); y += dy;
+  text("x-increment: " + xincrement, 12, y); y += dy;
+  y = height - dy;
+}
+
+void keyPressed() {
+  if (key == 'z') {
+    scale++;
+  }
+  if (key == 'x') {
+    scale--;
+  }
+  if (key == 'w') {
+    y+=move;
+  }
+  if (key == 's') {
+    y-=move;
+  }
+  if (key == 'a') {
+    x-=move;
+  }
+  if (key == 'd') {
+    x+=move;
+  }
+  if (key == 'r') {
+    rX+=inc;
+  }
+  if (key == 'f') {
+    rX-=inc;
+  }
+  if (key == 't') {
+    rZ+=inc;
+  }
+  if (key == 'g') {
+    rZ-=inc;
+  }
+  if (key == '1') {
+    xincrement+=0.010;
+  }
+  if (key == '2') {
+    xincrement-=0.010;
+  }
+  if (key == 'm'){
+    background(255);
+    makeACube();
+  }
+  if (key == 'q') {
+    freq++;
+  }
+  if (key == 'e') {
+    freq--;
+  }
+}
+</code></pre>
+
+  </div>
+</div>
+
+<div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger1" class="expander-trigger expander-hidden demo">noisy cube example</a>
+  <div id="js-expander-content" class="expander-content">
+
+    <pre><code>/**
+* codeThread - simple cube example
+* by: Diatom Studio (diatom.cc)
+*
+* A simple example of using codeThread to generate tool paths or printing a simple cube and raft on makerbot
+*
+*
+*/
+
+import codeThreadLib.library.*;
+
+CodeThread codeThread;
+
+float xoff = 0.0;
+float xincrement = 0.02;
+float scale = 5;
+float move = 10;
+float y, x, rX, rZ, freq;
+float inc = 0.1;
+
+void setup() {
+  size(800, 800, P3D);
+  y = height/2;
+  x = width/2;
+  rX = PI/4;
+  rZ = PI/4;
+  freq = 12;
+
+  makeACube();
+}
+
+void makeACube(){
+
+  // create a new instance
+  codeThread = new CodeThread(this);
+
+  // set the machine to it's default settings tool temp 220 degrees
+  // build platform temp 110 degrees units (mm)
+  // set machine to absolute positioning
+  // set current position to home, 0,0,0
+  // set tool speed to 255 wait for the tool to heat
+  codeThread.setDefaults();
+
+  //generate a cube
+  float sideLen = 30; // lenght of the cubes side
+  float headSpeed = 1556.0f; // speed that the extruder head will travel at whilst printing
+  float zPos = 0; // keep track of the z pos of the extruder head
+  float zStep = 0.35f; // the amount to move up each step on the z axis
+
+  //generate a raft
+  codeThread.generateRaft(sideLen +5, sideLen + 5, 560,1500, 2.5f,1.5f); // generate a raft generateRaft(raftWidth,raftLength, headSpeedBottomLayer,headSpeedTopLayer, distanceBetweenSlatsBottomLayer,DistanceBetweenSlatsTopLayer)
+
+  zPos = 1.27;// after drawing the raft our new zheight is 1.27(mm)
+
+  for (zPos = 1.27; zPos &lt; 40; zPos+=zStep) {
+
+    float n = noise(xoff)*freq;
+
+    xoff += xincrement;
+    //move the extruder head to each point
+    codeThread.moveTo(-(sideLen/2), -(sideLen/2), zPos, headSpeed);
+
+    codeThread.extruderOnFwd(); // start extruding, now we're at the start point
+
+    codeThread.moveTo( 15, -15, zPos, headSpeed); //whilst extruding move extruder to 2nd corner
+    codeThread.moveTo( 10-n, -2, zPos, headSpeed);
+    codeThread.moveTo( 15, 15, zPos, headSpeed);
+    codeThread.moveTo( -15, 15, zPos, headSpeed);
+    codeThread.moveTo( -15, -15, zPos, headSpeed); //back to the start,
+
+    //shape complete, step up in the z direction and start all over again
+    codeThread.extruderOff(); // stop extruding
+  }
+
+  codeThread.printToConsole(); // print to console
+  codeThread.writeToFile(sketchPath +"/mySweetCube" + int(random(255)) + ".gcode");
+
+}
+
+void draw() {
+
+  //make things pretty, rotate and zoom to see cube
+  smooth();
+  background(255);
+  pushMatrix();
+
+  translate(x, y);//center at 0,0
+  rotateX(rX);
+  rotateZ(rZ);
+  scale(scale);
+
+  //draw the platform
+  noStroke();
+  fill(220, 220, 220);
+  rect(-(80/2), -(80/2), (80), (80)); // draw the makerbot platform for reference
+  stroke(0, 0, 0, 80);
+
+
+  codeThread.render(); //render the tool paths
+
+
+  popMatrix();
+  fill(0);
+  stroke(0);
+
+  // draw instructions
+  int y = 24, dy = 12;
+  text("INSTRUCTIONS", 12, y); y += dy;
+  text("w: move up", 12, y); y += dy;
+  text("s: move down", 12, y); y += dy;
+  text("a: move left", 12, y); y += dy;
+  text("d: move right", 12, y); y += dy;
+  text("z: zoom in", 12, y); y += dy;
+  text("x: zoom out", 12, y); y += dy;
+  text("r: rotate Z (+)", 12, y); y+= dy;
+  text("f: rotate Z (-)", 12, y); y += dy;
+  text("m: rebuild cube", 12, y); y += dy;
+  text("q: increase frequency", 12, y); y += dy;
+  text("e: decrease frequency", 12, y); y += dy;
+  text("frequency: " + freq, 12, y); y += dy;
+  text("x-increment: " + xincrement, 12, y); y += dy;
+  y = height - dy;
+}
+
+void keyPressed() {
+  if (key == 'z') {
+    scale++;
+  }
+  if (key == 'x') {
+    scale--;
+  }
+  if (key == 'w') {
+    y+=move;
+  }
+  if (key == 's') {
+    y-=move;
+  }
+  if (key == 'a') {
+    x-=move;
+  }
+  if (key == 'd') {
+    x+=move;
+  }
+  if (key == 'r') {
+    rX+=inc;
+  }
+  if (key == 'f') {
+    rX-=inc;
+  }
+  if (key == 't') {
+    rZ+=inc;
+  }
+  if (key == 'g') {
+    rZ-=inc;
+  }
+  if (key == '1') {
+    xincrement+=0.010;
+  }
+  if (key == '2') {
+    xincrement-=0.010;
+  }
+  if (key == 'm'){
+    background(255);
+    makeACube();
+  }
+  if (key == 'q') {
+    freq++;
+  }
+  if (key == 'e') {
+    freq--;
+  }
+}
+</code></pre>
+
+  </div>
+</div>
 
       </article>
     </li>
@@ -1537,6 +1990,12 @@ void serialEvent(Serial p)
     
     <li><a class="scroll-on-page-link" href="#Six">
       Week Six
+    </a></li>
+    
+    
+    
+    <li><a class="scroll-on-page-link" href="#Seven">
+      Week Seven
     </a></li>
     
     
