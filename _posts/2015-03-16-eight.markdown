@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Eight"
+subtitle: "Simulate"
+date:   2015-03-16 07:00:00
+published: true
+categories: >
+  week
+  class
+---
+
+>
+
+*here's what we'll cover:*
+
+- Saving meshes to STL files
+- [HE mesh Processing Library](http://hemesh.wblut.com)
+- [ModelBuilderMk2 Processing Library](https://github.com/mariuswatz/modelbuilderMk2)
+- [Super Skein Model Slicer](http://www.thingiverse.com/thing:3649) / [github page](https://github.com/MaskedRetriever/SuperSkein)
+
+Saving Mesh files using the HE Mesh Library
+
+    Contributed Libraries -> HE_Mesh 2014 -> spielerei -> Twinlso
+
+    Contributed Libraries -> HE_Mesh 2014 -> tutorial -> Tut004_Mesh_Saving
+
+*links:*
+
+- [parametric world tumblr](http://parametricworld.tumblr.com)
+- [Algorithmic Abuse](http://improved.ro/blog/?p=1213)
+
+*for next week:*
+
+- prepare proposals for the final project ([Example Proposal]({{ "/assets/ofSketchBoilerPlateProposal.jpg" | prepend: site.baseurl }}))
+- read [The Algorithmic Thought Police](http://mariuswatz.com/mwatztumblrcom/the-algorithm-thought-police.html)
+- read [Generative Art and Software Abstraction]({{ "/assets/pdfs/generative-art-and-software-abstraction.pdf" | prepend: site.baseurl }})
+- read [All Your Vectors Are Belong to Us]({{ "/assets/pdfs/All-Your-Vectors-Are-Belong-to-Us.pdf" | prepend: site.baseurl }})

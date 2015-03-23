@@ -10,9 +10,112 @@
 </description>
     <link>http://embodyingcode.com/</link>
     <atom:link href="http://embodyingcode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Mar 2015 10:42:50 -0500</pubDate>
-    <lastBuildDate>Mon, 09 Mar 2015 10:42:50 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Mar 2015 08:46:36 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Mar 2015 08:46:36 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Nine</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;The final digital frontier is proving to be the manipulation of atoms rather than bits.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;here’s what we’ll cover:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;present/discuss proposals &lt;/li&gt;
+  &lt;li&gt;discuss readings&lt;/li&gt;
+  &lt;li&gt;talk about parametrics&lt;/li&gt;
+  &lt;li&gt;plan out next 5 weeks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Parametric design refers to a conceptual framework where objects and structures are articulated as code, becoming semi-autonomous software processes rather than static models. By describing forms as the product of generative logic manipulated through given parameters, it becomes possible to produce radical new types of artifacts and spatial constructs. Specific outputs are then produced on-demand, either through direct user interaction or automated logic, with external data sources, randomized parameters or environmental factors as possible inputs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Translated to executable code, even relatively primitive rule sets can result in complex forms. By leveraging computational principles like simulation, algorithmic geometry or data processing, we are able to create forms that inhabit a potentially endless parameter space of possible outcomes. Such forms often exhibit unexpected qualities as a byproduct of algorithmic idiosyncracy, from glitch effects and coding errors to the essential unknowability of generative systems. &lt;strong&gt; -Marius Watz&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;links:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://parametricworld.tumblr.com&quot;&gt;parametric world tumblr&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://natureofcode.com&quot;&gt;Nature of Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.flickr.com/groups/digitalfabrication/pool/&quot;&gt;Digital Fabrication Flickr&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.pinterest.com/watzmarius/digital-fabrication/&quot;&gt;Digital Fabrication Pinterest&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.pinterest.com/matsys/computational-design/&quot;&gt;Computational Design Pinterest&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://workshop.evolutionzone.com/2007/09/24/unlekkerlib/&quot;&gt;Processing STL Export Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://n-e-r-v-o-u-s.com&quot;&gt;nervous system site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;for next week:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wired.com/2012/04/an-essay-on-the-new-aesthetic/&quot;&gt;read this essay on the New Aesthetic&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://new-aesthetic.tumblr.com&quot;&gt;New Aesthetic Tumblr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 23 Mar 2015 02:00:00 -0500</pubDate>
+        <link>http://embodyingcode.com/week/class/2015/03/23/nine.html</link>
+        <guid isPermaLink="true">http://embodyingcode.com/week/class/2015/03/23/nine.html</guid>
+        
+        
+        <category>week</category>
+        
+        <category>class</category>
+        
+      </item>
+    
+      <item>
+        <title>Eight</title>
+        <description>&lt;blockquote&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;here’s what we’ll cover:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Saving meshes to STL files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hemesh.wblut.com&quot;&gt;HE mesh Processing Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mariuswatz/modelbuilderMk2&quot;&gt;ModelBuilderMk2 Processing Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.thingiverse.com/thing:3649&quot;&gt;Super Skein Model Slicer&lt;/a&gt; / &lt;a href=&quot;https://github.com/MaskedRetriever/SuperSkein&quot;&gt;github page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Saving Mesh files using the HE Mesh Library&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Contributed Libraries -&amp;gt; HE_Mesh 2014 -&amp;gt; spielerei -&amp;gt; Twinlso
+
+Contributed Libraries -&amp;gt; HE_Mesh 2014 -&amp;gt; tutorial -&amp;gt; Tut004_Mesh_Saving
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;links:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://parametricworld.tumblr.com&quot;&gt;parametric world tumblr&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://improved.ro/blog/?p=1213&quot;&gt;Algorithmic Abuse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;for next week:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;prepare proposals for the final project (&lt;a href=&quot;/assets/ofSketchBoilerPlateProposal.jpg&quot;&gt;Example Proposal&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;read &lt;a href=&quot;http://mariuswatz.com/mwatztumblrcom/the-algorithm-thought-police.html&quot;&gt;The Algorithmic Thought Police&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;read &lt;a href=&quot;/assets/pdfs/generative-art-and-software-abstraction.pdf&quot;&gt;Generative Art and Software Abstraction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;read &lt;a href=&quot;/assets/pdfs/All-Your-Vectors-Are-Belong-to-Us.pdf&quot;&gt;All Your Vectors Are Belong to Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 16 Mar 2015 02:00:00 -0500</pubDate>
+        <link>http://embodyingcode.com/week/class/2015/03/16/eight.html</link>
+        <guid isPermaLink="true">http://embodyingcode.com/week/class/2015/03/16/eight.html</guid>
+        
+        
+        <category>week</category>
+        
+        <category>class</category>
+        
+      </item>
     
       <item>
         <title>Seven</title>

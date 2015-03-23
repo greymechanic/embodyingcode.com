@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Nine"
+subtitle: "Parametric"
+date:   2015-03-23 07:00:00
+published: true
+categories: >
+  week
+  class
+---
+
+> The final digital frontier is proving to be the manipulation of atoms rather than bits.
+
+*here's what we'll cover:*
+
+- present/discuss proposals 
+- discuss readings
+- talk about parametrics
+- plan out next 5 weeks
+
+
+> Parametric design refers to a conceptual framework where objects and structures are articulated as code, becoming semi-autonomous software processes rather than static models. By describing forms as the product of generative logic manipulated through given parameters, it becomes possible to produce radical new types of artifacts and spatial constructs. Specific outputs are then produced on-demand, either through direct user interaction or automated logic, with external data sources, randomized parameters or environmental factors as possible inputs.
+
+> Translated to executable code, even relatively primitive rule sets can result in complex forms. By leveraging computational principles like simulation, algorithmic geometry or data processing, we are able to create forms that inhabit a potentially endless parameter space of possible outcomes. Such forms often exhibit unexpected qualities as a byproduct of algorithmic idiosyncracy, from glitch effects and coding errors to the essential unknowability of generative systems. <strong> -Marius Watz</strong>
+
+*links:*
+
+- [parametric world tumblr](http://parametricworld.tumblr.com)
+- [Nature of Code](http://natureofcode.com)
+- [Digital Fabrication Flickr](http://www.flickr.com/groups/digitalfabrication/pool/)
+- [Digital Fabrication Pinterest](https://www.pinterest.com/watzmarius/digital-fabrication/)
+- [Computational Design Pinterest](https://www.pinterest.com/matsys/computational-design/)
+- [Processing STL Export Library](http://workshop.evolutionzone.com/2007/09/24/unlekkerlib/)
+- [nervous system site](http://n-e-r-v-o-u-s.com)
+
+*for next week:*
+
+- [read this essay on the New Aesthetic](http://www.wired.com/2012/04/an-essay-on-the-new-aesthetic/)
+- [New Aesthetic Tumblr](http://new-aesthetic.tumblr.com)
+
